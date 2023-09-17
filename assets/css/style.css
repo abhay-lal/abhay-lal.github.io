@@ -1110,9 +1110,11 @@ textarea.input-field {
     margin-bottom: 0;
   }
 
+  
   .hero img {
-    height: 100%;
-    width: auto;
+    /* height: 100%;
+    width: auto; */
+    margin-top: 10%;
     margin-inline: auto;
   }
 
