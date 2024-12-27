@@ -104,7 +104,7 @@ img {
 
 /*==================== REUSABLE CSS CLASSES ====================*/
 .section {
-  padding: 2rem 0 4rem;
+  padding: 1rem 0 2rem;
 }
 
 .section__title {
@@ -440,6 +440,17 @@ img {
 /*==================== SKILLS ====================*/
 .skills__container {
   row-gap: 0;
+}
+.skills__percentage {
+  display: block;
+  height: 5px;
+  background-color: var(--first-color);
+  border-radius: 5px;
+}
+
+.skills__icon {
+  font-size: 2rem;
+  color: var(--first-color);
 }
 
 .skills__header {
@@ -1172,7 +1183,7 @@ img {
     padding: 6rem 0 2rem;
   }
   .section__subtitle {
-    margin-bottom: 4rem;
+    margin-bottom: 1rem;
   }
   .header {
     top: 0;
@@ -1217,7 +1228,7 @@ img {
     margin-left: 3rem;
   }
   .about__container {
-    column-gap: 5rem;
+    column-gap: 1rem;
   }
   .about__img {
     width: 350px;
