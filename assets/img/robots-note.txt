@@ -1,0 +1,2 @@
+Note: Ensure abhay.png is at least 512x512 for rich preview cards.
+
