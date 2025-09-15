@@ -323,8 +323,6 @@ img {
 .home__scroll-arrow {
   font-size: 1.25rem;
 }
-
-/*========== BUTTONS ==========*/
 .button {
   display: inline-block;
   background-color: var(--first-color);
@@ -388,8 +386,10 @@ img {
 
 /*==================== ABOUT ====================*/
 .about__img {
-  width: 200px;
-  border-radius: .5rem;
+  width: 400px;
+  height: 340px;
+  object-fit: cover;
+  border-radius: .8rem;
   justify-self: center;
   align-self: center;
   margin-bottom: 50px;
@@ -398,11 +398,22 @@ img {
 .about__description {
   text-align: center;
   margin-bottom: var(--mb-2-5);
+  margin-top: 0;
+  font-size: 1.0625rem;
+  line-height: 1.8;
+}
+
+/* Wider container for About section */
+.about__container.container {
+  max-width: 1100px;
 }
 
 .about__info {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
   margin-bottom: var(--mb-2-5);
 }
 
@@ -424,6 +435,7 @@ img {
 .about__buttons {
   display: flex;
   justify-content: center;
+  margin-top: var(--mb-1-5);
 }
 
 .home__donlinks {
@@ -1152,10 +1164,7 @@ img {
   .home__data {
     grid-column: initial;
   }
-  .home__img {
-    order: 1;
-    justify-self: center;
-  }
+  .home__img { order: 1; justify-self: center; }
   .about__container,
   .skills__container,
   .portfolio__content,
@@ -1221,6 +1230,7 @@ img {
   .home__blob {
     width: 270px;
   }
+  .home__photo img { max-width: 360px; }
   .home__scroll {
     display: block;
   }
@@ -1229,18 +1239,32 @@ img {
   }
   .about__container {
     column-gap: 1rem;
+    align-items: stretch;
   }
   .about__img {
-    width: 350px;
+    width: 480px;
+    height: 360px;
+    object-fit: cover;
   }
   .about__description {
     text-align: initial;
+    margin-top: 0;
+    font-size: 1.125rem;
+    line-height: 1.85;
+  }
+  .about__data {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    height: 100%;
   }
   .about__info {
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 2rem;
   }
   .about__buttons {
-    justify-content: initial;
+    justify-content: flex-start;
   }
   .qualification__tabs {
     justify-content: center;
@@ -1320,6 +1344,8 @@ img {
   .services__container {
     grid-template-columns: repeat(3, 238px);
   }
+  .home__wordcloud { width: 380px; height: 380px; }
+  .home__photo img { max-width: 420px; }
   .portfolio__content {
     column-gap: 5rem;
   }

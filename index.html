@@ -12,17 +12,50 @@
         <meta name="description" content="Hey there! I'm Abhay. I'm a Machine Learning Engineer and Computer Science Student from India.">
 
         <link rel="icon" href="./assets/img/favicon.ico">
+        <link rel="canonical" href="https://abhay-lal.github.io/">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Abhay - Machine Learning Engineer | Portfolio">
+        <meta property="og:description" content="Hey there! I'm Abhay. I'm a Machine Learning Engineer and Computer Science Student from India.">
+        <meta property="og:url" content="https://abhay-lal.github.io/">
+        <meta property="og:image" content="https://abhay-lal.github.io/assets/img/abhay.png">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Abhay - Machine Learning Engineer | Portfolio">
+        <meta name="twitter:description" content="Machine Learning Engineer | UC San Diego | Projects, Publications, Contact">
+        <meta name="twitter:image" content="https://abhay-lal.github.io/assets/img/abhay.png">
+        <link rel="preload" href="/assets/css/TESLA.ttf" as="font" type="font/ttf" crossorigin>
         <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
         <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css">
         <link rel="stylesheet" href="./assets/css/styles.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.1/css/academicons.min.css">
         <link rel="stylesheet" href="https://code.iconify.design/2/2.1.0/iconify.min.css">
-        <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
-        <script src="https://unicons.iconscout.com/release/v3.0.6/script/monochrome/bundle.js"></script>
+        <script defer src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
+        <script defer src="https://unicons.iconscout.com/release/v3.0.6/script/monochrome/bundle.js"></script>
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "name": "Abhay Lal",
+          "url": "https://abhay-lal.github.io/",
+          "image": "https://abhay-lal.github.io/assets/img/abhay.png",
+          "sameAs": [
+            "https://github.com/abhay-lal",
+            "https://www.linkedin.com/in/lal-abhay/",
+            "https://scholar.google.com/citations?user=TsTzc9AAAAAJ&hl=en&oi=ao",
+            "https://x.com/abbylaal"
+          ],
+          "jobTitle": "Machine Learning Engineer",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "UC San Diego"
+          }
+        }
+        </script>
 
         <title>Abhay - Machine Learning Engineer | Portfolio</title>
     </head>
     <body>
+        
+        <a class="skip-to-content" href="#home" style="position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to content</a>
         <header class="header" id="header">
             <nav class="nav container">
                 <svg style="display: none;">
@@ -38,7 +71,7 @@
                     Abhay Lal
                 </a>
 
-                <div class="nav__menu" id="nav-menu">
+                <div class="nav__menu" id="nav-menu" role="navigation" aria-label="Primary">
                     <ul class="nav__list grid">
                         <li class="nav__item">
                             <a href="#home" class="nav__link active-link">
@@ -85,7 +118,10 @@
 
                     </ul>
                     
-                    <i class="uil uil-times nav__close" id="nav-close"></i>
+                    <i class="uil uil-times nav__close" id="nav-close" aria-label="Close menu" role="button" tabindex="0"></i>
+                </div>
+                <div id="nav-toggle" class="nav__toggle" aria-label="Open menu" role="button" tabindex="0">
+                    <i class="uil uil-apps"></i>
                 </div>
             </nav>
         </header>
@@ -95,20 +131,23 @@
                 <div class="home__container container grid">
                     <div class="home__content grid">
                         <div class="home__social">
-                            <a href="https://www.linkedin.com/in/lal-abhay/" target="_blank" class="home__social-icon">
+                            <a href="https://www.linkedin.com/in/lal-abhay/" target="_blank" rel="noopener noreferrer" class="home__social-icon">
                                 <i class="uil uil-linkedin-alt"></i>
                             </a>
 
-                            <a href="https://github.com/abhay-lal" target="_blank" class="home__social-icon">
+                            <a href="https://github.com/abhay-lal" target="_blank" rel="noopener noreferrer" class="home__social-icon">
                                 <i class="uil uil-github-alt"></i>                            
                             </a>
 
-                        
-                        <a href="https://scholar.google.com/citations?user=TsTzc9AAAAAJ&hl=en&oi=ao" target="_blank" class="home__social-icon" >
+                            <a href="https://x.com/abbylaal" target="_blank" rel="noopener noreferrer" class="home__social-icon" aria-label="X (Twitter)">
+                                <i class="uil uil-twitter"></i>
+                            </a>
+
+                        <a href="https://scholar.google.com/citations?user=TsTzc9AAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener noreferrer" class="home__social-icon" >
                             <i class="ai ai-google-scholar"></i> 
                         </a>
 
-                        <a href="https://www.hackerrank.com/profile/Abhay_L" target="_blank" class="home__social-icon" >
+                        <a href="https://www.hackerrank.com/profile/Abhay_L" target="_blank" rel="noopener noreferrer" class="home__social-icon" >
                             <i class="iconify" data-icon="tabler:brand-hackerrank" data-inline="false"></i> 
                         </a>
                                                
@@ -121,9 +160,8 @@
                                         <circle cx="90" cy="90" r="78" />
                                     </clipPath>
                                 </defs>
-                                <image class="home__blob-img" x="6.5" y="0" width="187" height="187" xlink:href="./assets/img/abhay_new.jpeg" clip-path="url(#circleClip)" />
+                                <image class="home__blob-img" x="6.5" y="0" width="187" height="187" xlink:href="./assets/img/abhay_new.png" clip-path="url(#circleClip)" />
                             </svg>
-                            
                         </div>
 
                         <div class="home__data">
@@ -139,6 +177,8 @@
                                 Resume <i class="uil uil-file button__icon"></i>
                             </a>
                         </div>
+
+                        
                     </div>
 
                     <div class="home__scroll">
@@ -156,35 +196,13 @@
                 <span class="section__subtitle">My Introduction</span>
 
                 <div class="about__container container grid">
-                    <img src="./assets/img/ai-work.png" alt="Abhay working on his laptop" class="about__img" style="height: 70%;" style="width: 130%;" >
+                    <img src="./assets/img/gemini-work.png" alt="Abhay working on his laptop" class="about__img" style="height: 90%;" style="width: 100%;" loading="lazy">
 
                     <div class="about__data">
-                        <p class="about__description"><br><br><br>
-                        With a relentless curiosity for solving real-world challenges through technology, I specialize in pushing the boundaries of machine learning and artificial intelligence.<br> As a Master's student at the University of California, San Diego, I focus on creating impactful solutions in areas like computer vision, natural language processing, and generative AI. My professional journey spans roles at industry leaders such as Wells Fargo, Samsung R&D, and IIT Bombay, where I honed my skills in developing scalable AI systems, conducting groundbreaking research, and delivering measurable results. I am passionate about bridging the gap between theoretical innovation and practical application, contributing to advancements that shape the future of AI.
+                        <p class="about__description">
+                        With a relentless curiosity for solving real-world challenges through technology, I specialize in pushing the boundaries of machine learning and artificial intelligence. As a Master's student at the University of California, San Diego, I focus on creating impactful solutions in areas like computer vision, natural language processing, and generative AI. My professional journey spans roles at industry leaders such as Wells Fargo, Samsung R&D, and IIT Bombay, where I honed my skills in developing scalable AI systems, conducting groundbreaking research, and delivering measurable results. I am passionate about bridging the gap between theoretical innovation and practical application, contributing to advancements that shape the future of AI.
                         </p>
 
-                        <div class="about__info">
-                            <div>
-                                <span class="about__info-title">05</span>
-                                <span class="about__info-name">Publications</span>
-                            </div>
-
-                            <div>
-                                <span class="about__info-title">9+</span>
-                                <span class="about__info-name">Projects</span>
-                            </div>
-
-                            <div>
-                                <span class="about__info-title">04+</span>
-                                <span class="about__info-name">Internships</span>
-                            </div>
-                        </div>
-
-                        <div class="about__buttons">
-                            <a href="#contact" class="button button--flex">
-                                Leave a message <i class="uil uil-comment-download button__icon"></i>
-                            </a>
-                        </div>
 
                     </div>
                 </div>
@@ -366,16 +384,26 @@
                                 </div>
                           
                                 <div>
-                                    <img src="assets\img\ucsd.png" alt="UCSD Logo" style="width: 90px; height: 90px; float: left; margin-right: 3px;"><br>
+                                    <img src="assets/img/ucsd.png" alt="UCSD Logo" style="width: 90px; height: 90px; float: left; margin-right: 3px;" loading="lazy"><br>
                                     <h3 class="qualification__title">Masters of Science in Computer Science</h3>
                                     <span class="qualification__subtitle">University of California, San Diego</span>
                                         <span class="qualification__subtitle">
+                                            GPA : 3.92/4.0<br><br>
+                                            Spring 2025 :<br>
+                                            CSE 237D : Embedded Systems Design Project <br>
+                                            CSE 253 : Machine Learning for Music <br>
+                                            COGS 209 : Statistical Machine Learning for Social Sciences <br>
+                                            <br>
+                                            Winter 2025 :<br>
+                                            CSE 251A : ML: Learning Algorithms <br>
+                                            CSE 251C : ML: Machine Learning Theory <br>
+                                            CSE 291J : Fair and transparent ML <br>
+                                            <br>
                                             Fall 2024 :<br>
                                             CSE 202 : Algorithm Design and Analysis <br>
                                             CSE 256 : Statistical Natural Language Processing <br>
                                             CSE 258 : Recommender Systems and Web Mining <br>
                                             <br>
-                                            Graduate Student Researcher at the Moores Cancer Research Center, UCSD Health, utilising machine learning for cancer detection and treatment.
                                         </span>
                                         <div class="qualification__calendar">
                                         <i class="uil uil-calendar-alt"></i>
@@ -387,7 +415,7 @@
 
                             <div class="qualification__data">
                                 <div>
-                                <img src="assets\img\srm.png" alt="SRM IST Logo" style="width: 90px; height: 40px; float: left; margin-right: 3px;">
+                                <img src="assets/img/srm.png" alt="SRM IST Logo" style="width: 90px; height: 40px; float: left; margin-right: 3px;" loading="lazy">
                                 <h3 class="qualification__title">B.Tech - Computer Science and Engineering</h3>
                                 <span class="qualification__subtitle">SRM Institute of Science and Technology , KTR Campus</span>
                                 <span class="qualification__subtitle">
@@ -447,8 +475,33 @@
                         <div class="qualification__content qualification__active" data-content id="work">
 
                             <div class="qualification__data">
+                                <div></div>
+
+                                <div class="qualification__time">
+                                    <span class="qualification__rounder"></span>
+                                    <span class="qualification__line"></span>
+                                </div>
+
                                 <div>
-                                    <img src="assets\img\iitb.png" alt="IIT-B Logo" style="width: 50px; height: 50px; float: left; margin-right: 10px;">
+                                    <img src="assets/img/ucsd.png" alt="UC San Diego Health Logo" style="width: 50px; height: 50px; float: left; margin-right: 10px;" loading="lazy">
+                                    <h3 class="qualification__title">Graduate Student Researcher</h3>
+                                    <span class="qualification__subtitle"><i>UC San Diego Health</i> • La Jolla, CA</span>
+                                    <span class="qualification__subtitle">
+                                        - Refactored 5k+ LOC <b>MATLAB</b> neuroimaging code into modular <b>Python</b> pipelines, reducing runtime by 20%.
+                                        <br><br>- Applied scalable <b>feature selection</b> and nested <b>cross-validation</b> to 10k+ MRI scans, ensuring reproducibility.
+                                        <br><br>- Developed predictive models (<b>Logistic Regression, SVM</b>) on structural/diffusion MRI using <b>multi-modal data</b>.
+                                        <br><br>- Collaborated with neuroscientists to integrate <b>mixed-effects models</b> into production-ready research pipelines.
+                                    </span>
+                                    <div class="qualification__calendar">
+                                        <i class="uil uil-calendar-alt"></i>
+                                        Jan 2025 - Present
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="qualification__data">
+                                <div>
+                                    <img src="assets/img/iitb.png" alt="IIT-B Logo" style="width: 50px; height: 50px; float: left; margin-right: 10px;" loading="lazy">
                                     <h3 class="qualification__title">Research Intern (IRCC)</h3>
                                     <span class="qualification__subtitle"><i>Indian Institute of Technology Bombay</i></span>
                                         <span class="qualification__subtitle"> 
@@ -477,7 +530,7 @@
                                 </div>
 
                                 <div>
-                                    <img src="assets\img\wells.png" alt="WellsFargo Logo" style="width: 55px; height: 55px; float: left; margin-right: 10px;">
+                                    <img src="assets/img/wells.png" alt="Wells Fargo Logo" style="width: 55px; height: 55px; float: left; margin-right: 10px;" loading="lazy">
                                     <h3 class="qualification__title">Intern Analyst (CEDA)</h3>
                                     <span class="qualification__subtitle"><i>Wells Fargo</i> </span>
                                     <span class="qualification__subtitle">
@@ -496,7 +549,7 @@
 
                             <div class="qualification__data">
                                 <div>
-                                    <img src="assets\img\sam.png" alt="Samsung PRISM Logo" style="width: 65px; height: 55px; float: left; margin-right: 10px;">
+                                    <img src="assets/img/sam.png" alt="Samsung PRISM Logo" style="width: 65px; height: 55px; float: left; margin-right: 10px;" loading="lazy">
                                     <h3 class="qualification__title">Research Intern (PRISM)</h3>
                                     <span class="qualification__subtitle"><i>Samsung R&D Institute India-Bangalore </i></span>
                                     <span class="qualification__subtitle">
@@ -526,7 +579,7 @@
                                 </div>
 
                                 <div>
-                                    <img src="assets\img\nus.png" alt="NUS Logo" style="width: 90px; height: 50px; float: left; margin-right: 10px;">
+                                    <img src="assets/img/nus.png" alt="NUS Logo" style="width: 90px; height: 50px; float: left; margin-right: 10px;" loading="lazy">
                                     <h3 class="qualification__title">Academic Intern</h3>
                                     <span class="qualification__subtitle"><i>National University of Singapore</i> </span>
                                     <span class="qualification__subtitle">
@@ -557,12 +610,47 @@
                     <div class="swiper-wrapper">
 
                         <div class="portfolio__content grid swiper-slide">
-                            <img src="./assets/img/asset-buble.jpg" alt="Asset Bubble Stock market" class="portfolio__img">
+                            <img src="./assets/img/MusicCRS.png" alt="Benchmarking Music Conversational Recommendation" class="portfolio__img" loading="lazy">
+                            <div class="portfolio__data">
+                                <h3 class="portfolio__title">Benchmarking Music Conversational Recommendation</h3>
+                                <p class="portfolio__description">Built a novel multi-modal dataset by combining Reddit dialogues with YouTube audio (FFmpeg, Python). Implemented entity linking and benchmarked LLMs (Qwen-2.5-7B) using PyTorch Transformers.</p>
+                            </div>
+                        </div>
+
+                        <div class="portfolio__content grid swiper-slide">
+                            <img src="./assets/img/fire-ready.png" alt="Fire-Ready Forests Data Challenge (Winner)" class="portfolio__img" loading="lazy">
+                            <div class="portfolio__data">
+                                <h3 class="portfolio__title">Fire-Ready Forests Data Challenge (Winner)</h3>
+                                <p class="portfolio__description">Processed ecological and spatial data with missing-value handling and feature engineering for species classification. Built ensemble models achieving 96.9% test precision on the National Data Platform; results presented at ICPP 2025.</p>
+                                <a href="https://github.com/abhay-lal/fire-ready-forests-agni" class="button button--flex button--small portfolio__button" target="_blank" rel="noopener noreferrer">View Repo <i class="uil uil-arrow-right button__icon"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="portfolio__content grid swiper-slide">
+                            <img src="./assets/img/blogpod.png" alt="BlogPod" class="portfolio__img" loading="lazy">
+                            <div class="portfolio__data">
+                                <h3 class="portfolio__title">BlogPod</h3>
+                                <p class="portfolio__description">Pipeline using LLaMA 3.1 (8B/70B/405B) to convert podcast transcripts into structured blogs via prompt engineering. Evaluation with Gemini-1.5-Flash on clarity, tone, and engagement.</p>
+                                <a href="https://github.com/abhay-lal/BlogPod" class="button button--flex button--small portfolio__button" target="_blank" rel="noopener noreferrer">View Repo <i class="uil uil-arrow-right button__icon"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="portfolio__content grid swiper-slide">
+                            <img src="./assets/img/tinyowl.png" alt="TinyML Owl Vocalization" class="portfolio__img" loading="lazy">
+                            <div class="portfolio__data">
+                                <h3 class="portfolio__title">TinyML Owl Vocalization</h3>
+                                <p class="portfolio__description">Built sub-0.5MB CNNs in PyTorch for owl call classification; quantized and exported to ONNX/TFLite. Deployed on STM32 with X-Cube.AI and TFLite Micro for real-time, low-power acoustic monitoring (with E4E & San Diego Zoo Wildlife Alliance).</p>
+                                <a href="https://github.com/abhay-lal/TinyML-Owl" class="button button--flex button--small portfolio__button" target="_blank" rel="noopener noreferrer">View Repo <i class="uil uil-arrow-right button__icon"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="portfolio__content grid swiper-slide">
+                            <img src="./assets/img/asset-buble.jpg" alt="Asset Bubble Stock market" class="portfolio__img" loading="lazy">
     
                             <div class="portfolio__data">
                                 <h3 class="portfolio__title">Asset Bubble</h3>
                                 <p class="portfolio__description">Project helps the investors using a predictive analytics model or providing actionable analytical insights to this problem. The output is the confidence score on whether the stock market will crash in 2022 or not and if it does find an approximate time interval in which this can possibly occur.                               </p>
-                                <a href="https://github.com/abhay-lal/Asset-bubble" class="button button--flex button--small portfolio__button">
+                                <a href="https://github.com/abhay-lal/Asset-bubble" class="button button--flex button--small portfolio__button" target="_blank" rel="noopener noreferrer">
                                     View
                                     <i class="uil uil-arrow-right button__icon"></i>
                                 </a>
@@ -570,28 +658,28 @@
                         </div>
 
                         <div class="portfolio__content grid swiper-slide">
-                            <img src="./assets/img/alveoli.png" alt="Chest Xray classifciation" class="portfolio__img">
+                            <img src="./assets/img/alveoli.png" alt="Chest X-ray classification" class="portfolio__img" loading="lazy">
     
                             <div class="portfolio__data">
                                 <h3 class="portfolio__title">Alveoli</h3>
                                 <p class="portfolio__description">
                                     Chest X-Ray reports in a matter of seconds.We have created a secure Chest X-Ray image classification based website and app that can detect Covid-19, Pneumonia and Tuberculosis. Deep Learning has been used to detect the disease by using a Convolutional Neural Network(MobileNetV2) which performs classification
                                 </p>
-                                <a href="https://github.com/abhay-lal/Alveoli" class="button button--flex button--small portfolio__button">
-                                    In Dev
+                                <a href="https://github.com/abhay-lal/Alveoli" class="button button--flex button--small portfolio__button" target="_blank" rel="noopener noreferrer">
+                                    View Repo
                                     <i class="uil uil-arrow-right button__icon"></i>
                                 </a>
                             </div>
                         </div>
 
                         <div class="portfolio__content grid swiper-slide">
-                            <img src="./assets/img/respas.png" alt="Resume parser and classifier" class="portfolio__img">
+                            <img src="./assets/img/respas.png" alt="Resume parser and classifier" class="portfolio__img" loading="lazy">
     
                             <div class="portfolio__data">
                                 <h3 class="portfolio__title">ResPas</h3>
                                 <p class="portfolio__description">This project is aimed at building a multi-label classification model using the principles of Deep Learning and NLP to effectively classify users into job categories given their resume.
                                 </p>
-                                <a href="https://github.com/abhay-lal/ResumeParserClassifier" class="button button--flex button--small portfolio__button">
+                                <a href="https://github.com/abhay-lal/ResumeParserClassifier" class="button button--flex button--small portfolio__button" target="_blank" rel="noopener noreferrer">
                                     View
                                     <i class="uil uil-arrow-right button__icon"></i>
                                 </a>
@@ -599,12 +687,12 @@
                         </div>
 
                         <div class="portfolio__content grid swiper-slide">
-                            <img src="./assets/img/btc.png" alt="Bitcoin price prediction" class="portfolio__img">
+                            <img src="./assets/img/btc.png" alt="Bitcoin price prediction" class="portfolio__img" loading="lazy">
     
                             <div class="portfolio__data">
                                 <h3 class="portfolio__title">BTC Prediction</h3>
                                 <p class="portfolio__description">In this Deep Learning Application, we have used the price data for Bitcoin to forecast its price in a specified future window. We have used the Tensorflow and Keras APIs to build a stacked LSTM model.</p>
-                                <a href="https://github.com/abhay-lal/Cryptocurrency-Price-Prediction" class="button button--flex button--small portfolio__button">
+                                <a href="https://github.com/abhay-lal/Cryptocurrency-Price-Prediction" class="button button--flex button--small portfolio__button" target="_blank" rel="noopener noreferrer">
                                     View
                                     <i class="uil uil-arrow-right button__icon"></i>
                                 </a>
@@ -612,14 +700,14 @@
                         </div>
 
                         <div class="portfolio__content grid swiper-slide">
-                            <img src="./assets/img/hand.png" alt="Astro number" class="portfolio__img">
+                            <img src="./assets/img/hand.png" alt="Astro number" class="portfolio__img" loading="lazy">
     
                             <div class="portfolio__data">
                                 <h3 class="portfolio__title">Astro Numbers</h3>
                                 <p class="portfolio__description">
                                     This project performs digit recognition using deep learning concepts. It can classify an image into 10 classes.We have built a Multilayer perceptron (MLP) model using most popular Google library Tensorflow to recognize handwritten digits.
                                 </p>
-                                <a href="https://github.com/abhay-lal/Hand-Written-Digit-Classification-Recognition" class="button button--flex button--small portfolio__button">
+                                <a href="https://github.com/abhay-lal/Hand-Written-Digit-Classification-Recognition" class="button button--flex button--small portfolio__button" target="_blank" rel="noopener noreferrer">
                                     View
                                     <i class="uil uil-arrow-right button__icon"></i>
                                 </a>
@@ -627,30 +715,30 @@
                         </div>
                           
                         <div class="portfolio__content grid swiper-slide">
-                            <img src="./assets/img/aibot.png" alt="Licence plate detection" class="portfolio__img">
+                            <img src="./assets/img/aibot.png" alt="License plate detection" class="portfolio__img" loading="lazy">
     
                             <div class="portfolio__data">
                                 <h3 class="portfolio__title">License Plate</h3>
                                 <p class="portfolio__description">
                                     Number Plate recognition, also called License Plate recognition using image processing methods is a potential research area in smart cities and the Internet of Things. An exponential increase in the number of vehicles necessitates the use of automated systems to maintain vehicle information for various purposes.
                                 </p>
-                                <a href="https://github.com/abhay-lal/Number-plate-recognition" class="button button--flex button--small portfolio__button">
-                                    In Dev
+                                <a href="https://github.com/abhay-lal/Number-plate-recognition" class="button button--flex button--small portfolio__button" target="_blank" rel="noopener noreferrer">
+                                    View Repo
                                     <i class="uil uil-arrow-right button__icon"></i>
                                 </a>
                             </div>
                         </div>
 
                         <div class="portfolio__content grid swiper-slide">
-                            <img src="./assets/img/ai-work-2.png" alt="InfoViz" class="portfolio__img">
+                            <img src="./assets/img/ai-work-2.png" alt="InfoViz" class="portfolio__img" loading="lazy">
     
                             <div class="portfolio__data">
                                 <h3 class="portfolio__title">InfoViz</h3>
                                 <p class="portfolio__description">
                                     The dataset would also include other variables, such as unemployment rates, industrial production levels, and stock prices, depending on the specific economic indicators being analyzed. The visualizations cover a range of economic indicators, including time, unemployment data, consumer price index, price-to-earnings ratio, open, high, low, close, and industrial production index. 
                                 </p>
-                                <a href="https://github.com/abhay-lal/InfoViz" class="button button--flex button--small portfolio__button">
-                                    View
+                                <a href="https://github.com/abhay-lal/InfoViz" class="button button--flex button--small portfolio__button" target="_blank" rel="noopener noreferrer">
+                                    View Repo
                                     <i class="uil uil-arrow-right button__icon"></i>
                                 </a>
                             </div>
@@ -686,7 +774,7 @@
                                     <div>
                                         <h3 class="testimonial__name">Gait speed based individual Recognition model using deep 2-D convolutional neural network</h3>
                                         <span class="testimonial__client">Conference : International Conference on Computer Communication and Informatics (ICCCI)                                            | Progress: <i>Published</i><br>
-                                            Link: <a href="https://ieeexplore.ieee.org/abstract/document/10128342">10.1109/ICCCI56745.2023.10128342</a><br>
+                                            Link: <a href="https://ieeexplore.ieee.org/abstract/document/10128342" target="_blank" rel="noopener noreferrer">10.1109/ICCCI56745.2023.10128342</a><br>
                                             Author(s): Abhay Lal; P Nithyakani
                                         </span>
                                     </div>
@@ -707,7 +795,7 @@
                                     <div>
                                         <h3 class="testimonial__name"> Human Gait Recognition Using Cross View Micro Gait Dataset with Light weight MobileNet</h3>
                                         <span class="testimonial__client">Conference :  International Conference on Recent Advances in Electrical, Electronics, Ubiquitous Communication, and Computational Intelligence (RAEEUCCI)<br>
-                                            Link: <a href="https://ieeexplore.ieee.org/abstract/document/10134510">10.1109/RAEEUCCI57140.2023.10134510</a><br>
+                                            Link: <a href="https://ieeexplore.ieee.org/abstract/document/10134510" target="_blank" rel="noopener noreferrer">10.1109/RAEEUCCI57140.2023.10134510</a><br>
                                             Author(s): Haripreeth Dwarakanath Avarur; Abhay Lal; Nithyakani P; Aryan Sinha; Gajulapalli Naga Vyshnavi; Shruthi Kannan
                                         </span>
                                     </div>
@@ -719,8 +807,6 @@
                             </p>
                         </div>
                     </div>
-
-
                     <div class="swiper-wrapper">
                         <div class="testimonial__content">
                             <div class="testimonial__data">
@@ -728,7 +814,7 @@
                                     <div>
                                         <h3 class="testimonial__name"> ALATS: Analysis of localization algorithms in terrestrial surveillance bots</h3>
                                         <span class="testimonial__client">Conference : IEEE International Conference on Electronics, Computing and Communication Technologies (CONECCT)<br>
-                                            Link: <a href="https://ieeexplore.ieee.org/abstract/document/10234740">10.1109/CONECCT57959.2023.10234740</a><br>
+                                            Link: <a href="https://ieeexplore.ieee.org/abstract/document/10234740" target="_blank" rel="noopener noreferrer">10.1109/CONECCT57959.2023.10234740</a><br>
                                             Author(s): Vaishnavi Moorthy; Darshil Shah; Shresth Kapoor; Srinivas Tb; Abhay Lal
                                         </span>
                                     </div>
@@ -749,7 +835,7 @@
                                     <div>
                                         <h3 class="testimonial__name">Automated screening of hip X-rays for osteoporosis by Singh’s index using machine learning algorithms</h3>
                                         <span class="testimonial__client">Indian Journal of Orthopaedics , Springer                                           | Progress: <i>Published</i><br>
-                                            Link: <a href="https://doi.org/10.1007/s43465-024-01246-9">10.1007/s43465-024-01246-9</a><br>
+                                            Link: <a href="https://doi.org/10.1007/s43465-024-01246-9" target="_blank" rel="noopener noreferrer">10.1007/s43465-024-01246-9</a><br>
                                             Author(s): Vijaya Kalavakonda, Sameer Mohamed, Abhay Lal , Sathish Muthu
                                         </span>
                                     </div>
@@ -771,7 +857,7 @@
                                     <div>
                                         <h3 class="testimonial__name">Unsupervised Machine Learning for Osteoporosis Diagnosis Using Singh Index Clustering on Hip Radiographs</h3>
                                         <span class="testimonial__client">arXiv preprint arXiv:2411.15253                                           | Progress: <i>Published</i><br>
-                                            Link: <a href="https://doi.org/10.48550/arXiv.2411.15253">10.48550/arXiv.2411.15253</a><br>
+                                            Link: <a href="https://doi.org/10.48550/arXiv.2411.15253" target="_blank" rel="noopener noreferrer">10.48550/arXiv.2411.15253</a><br>
                                             Author(s): Vimaladevi Madhivanan, Kalavakonda Vijaya, Abhay Lal, Senthil Rithika, Shamala Karupusamy Subramaniam, Mohamed Sameer
                                         </span>
                                     </div>
@@ -815,7 +901,7 @@
                     </div>
 
                 </div>
-                <iframe src='https://widgets.sociablekit.com/linkedin-profile-posts/iframe/25434862' frameborder='700' width='75%' height='700' style='display: block; margin: 0 auto;'> </iframe>
+                <iframe src='https://widgets.sociablekit.com/linkedin-profile-posts/iframe/25434862' frameborder='0' width='75%' height='700' style='display: block; margin: 0 auto;' loading='lazy' title='LinkedIn posts widget'> </iframe>
             </section>
         </main>
 
@@ -841,16 +927,19 @@
                     </ul>
 
                     <div class="footer__socials">
-                        <a href="https://github.com/abhay-lal" target="_blank" class="footer__social">
+                        <a href="https://github.com/abhay-lal" target="_blank" rel="noopener noreferrer" class="footer__social">
                             <i class="uil uil-github-alt"></i>
                         </a>
-                        <a href="https://www.linkedin.com/in/lal-abhay/" target="_blank" class="footer__social">
+                        <a href="https://www.linkedin.com/in/lal-abhay/" target="_blank" rel="noopener noreferrer" class="footer__social">
                             <i class="uil uil-linkedin-alt"></i>
                         </a>
-                        <a href="https://scholar.google.com/citations?user=TsTzc9AAAAAJ&hl=en&oi=ao" target="_blank" class="footer__social" >
+                        <a href="https://x.com/abbylaal" target="_blank" rel="noopener noreferrer" class="footer__social">
+                            <i class="uil uil-twitter"></i>
+                        </a>
+                        <a href="https://scholar.google.com/citations?user=TsTzc9AAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener noreferrer" class="footer__social" >
                             <i class="ai ai-google-scholar"></i> 
                         </a>
-                        <a href="https://www.hackerrank.com/profile/Abhay_L" target="_blank" class="footer__social" >
+                        <a href="https://www.hackerrank.com/profile/Abhay_L" target="_blank" rel="noopener noreferrer" class="footer__social" >
                             <i class="iconify" data-icon="tabler:brand-hackerrank" data-inline="false"></i> 
                         </a>
                                 
