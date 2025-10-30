@@ -107,6 +107,7 @@ img {
   font-size: var(--h1-font-size);
   color: var(--title-color);
   font-family: var(--heading-font);
+  text-transform: uppercase;
 }
 
 .section__subtitle {
@@ -199,6 +200,7 @@ img {
   font-size: var(--small-font-size);
   color: var(--title-color);
   font-weight: var(--font-medium);
+  text-transform: uppercase;
 }
 
 .nav__link:hover {
