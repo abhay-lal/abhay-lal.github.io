@@ -1,9 +1,5 @@
 /*========== GOOGLE FONTS ==========*/
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
-@font-face {
-  font-family: 'Tesla';
-  src: url('TESLA.ttf') format('truetype');
-}
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Sora:wght@600;700&display=swap");
 /*========== REST OF THE CODE ==========*/
 /*==================== VARIABLES CSS ====================*/
 :root {
@@ -27,7 +23,7 @@
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
   /*========== Font and typography ==========*/
   --body-font: 'Open Sans', sans-serif;
-  --heading-font: 'Tesla', sans-serif;
+  --heading-font: 'Sora', sans-serif;
   --big-font-size: 2rem;
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.25rem;
