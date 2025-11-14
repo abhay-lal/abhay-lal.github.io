@@ -50,6 +50,7 @@
 /* HUD Tech Visualization */
 .home__tech-scene {
   perspective: 1000px;
+  transform: translateZ(0);
 }
 
 .tech-hud {
@@ -129,6 +130,7 @@
   align-items: center;
   justify-content: center;
   z-index: 10;
+  will-change: transform;
 }
 
 /* Circular Text */
@@ -141,6 +143,7 @@
   margin-left: -120px;
   margin-top: -120px;
   z-index: 5;
+  will-change: transform;
 }
 
 .circular-text-svg {
@@ -167,6 +170,7 @@
   height: 0;
   z-index: 3;
   pointer-events: none;
+  will-change: transform;
 }
 
 .tech-icon {

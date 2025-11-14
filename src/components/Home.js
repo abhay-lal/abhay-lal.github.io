@@ -20,35 +20,32 @@ const Home = () => {
     <section className="home section" id="home" ref={ref}>
       <div className="home__container container grid">
         <div className="home__content grid">
-          <motion.div
-            className="home__social"
-            initial={{ opacity: 0, x: -50 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            {socialLinks.map((link, index) => (
-              <motion.a
-                key={index}
-                href={link.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="home__social-icon"
-                whileHover={{ scale: 1.2, rotate: 5 }}
-                whileTap={{ scale: 0.9 }}
-                initial={{ opacity: 0, y: 20 }}
-                animate={inView ? { opacity: 1, y: 0 } : {}}
-                transition={{ delay: 0.3 + index * 0.1 }}
-              >
-                <i className={link.icon}></i>
-              </motion.a>
-            ))}
-          </motion.div>
+                  <motion.div
+                    className="home__social"
+                    initial={{ opacity: 0 }}
+                    animate={inView ? { opacity: 1 } : {}}
+                    transition={{ duration: 0.4, delay: 0.1 }}
+                  >
+                    {socialLinks.map((link, index) => (
+                      <motion.a
+                        key={index}
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="home__social-icon"
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.95 }}
+                      >
+                        <i className={link.icon}></i>
+                      </motion.a>
+                    ))}
+                  </motion.div>
 
                   <motion.div
                     className="home__img home__tech-scene"
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={inView ? { opacity: 1, scale: 1 } : {}}
-                    transition={{ duration: 0.6 }}
+                    initial={{ opacity: 0 }}
+                    animate={inView ? { opacity: 1 } : {}}
+                    transition={{ duration: 0.4 }}
                   >
                     <div className="tech-hud">
                       {/* Central Python Logo */}
@@ -154,40 +151,20 @@ const Home = () => {
 
           <motion.div
             className="home__data"
-            initial={{ opacity: 0, y: 50 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.3 }}
+            initial={{ opacity: 0 }}
+            animate={inView ? { opacity: 1 } : {}}
+            transition={{ duration: 0.4, delay: 0.2 }}
           >
-            <motion.h1
-              className="home__title"
-              initial={{ opacity: 0 }}
-              animate={inView ? { opacity: 1 } : {}}
-              transition={{ duration: 0.6, delay: 0.5 }}
-            >
+            <h1 className="home__title">
               Hi, I'm Abhay
-            </motion.h1>
-            <motion.h3
-              className="home__subtitle"
-              initial={{ opacity: 0 }}
-              animate={inView ? { opacity: 1 } : {}}
-              transition={{ duration: 0.6, delay: 0.6 }}
-            >
+            </h1>
+            <h3 className="home__subtitle">
               AI Enthusiast
-            </motion.h3>
-            <motion.p
-              className="home__description"
-              initial={{ opacity: 0 }}
-              animate={inView ? { opacity: 1 } : {}}
-              transition={{ duration: 0.6, delay: 0.7 }}
-            >
+            </h3>
+            <p className="home__description">
               AI/ML researcher and data scientist based in San Diego, CA (UC San Diego). I work on AI Safety, Neuroimaging, Healthcare AI, LLMs and multimodal machine learning, building robust systems from research to production.
-            </motion.p>
-            <motion.div
-              className="home__buttons"
-              initial={{ opacity: 0 }}
-              animate={inView ? { opacity: 1 } : {}}
-              transition={{ duration: 0.6, delay: 0.8 }}
-            >
+            </p>
+            <div className="home__buttons">
               <a href="#contact" className="button button--flex">
                 Contact <i className="uil uil-message button__icon"></i>
               </a>
