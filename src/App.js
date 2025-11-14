@@ -7,6 +7,7 @@ import Skills from './components/Skills';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
 import Publications from './components/Publications';
+import GitHub from './components/GitHub';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ScrollUp from './components/ScrollUp';
@@ -44,6 +45,7 @@ function App() {
         <Experience />
         <Projects />
         <Publications />
+        <GitHub />
         <Contact />
       </main>
       <Footer />

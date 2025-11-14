@@ -22,6 +22,7 @@ const Header = ({ activeSection }) => {
     { id: 'experience', icon: 'uil-briefcase-alt', label: 'Experience' },
     { id: 'portfolio', icon: 'uil-scenery', label: 'Projects' },
     { id: 'research', icon: 'uil-flask', label: 'Publications' },
+    { id: 'github', icon: 'uil-github-alt', label: 'GitHub' },
     { id: 'contact', icon: 'uil-message', label: 'Contact' },
   ];
 

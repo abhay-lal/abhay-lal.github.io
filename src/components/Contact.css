@@ -44,3 +44,11 @@
   font-size: var(--small-font-size);
   color: var(--text-color-light);
 }
+
+.contact__linkedin {
+  margin-bottom: 4rem;
+}
+
+.contact__title-spacing {
+  margin-top: 4rem;
+}

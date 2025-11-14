@@ -56,6 +56,14 @@
     <priority>0.8</priority>
   </url>
   
+  <!-- GitHub Activity Section -->
+  <url>
+    <loc>https://abhay-lal.me/#github</loc>
+    <lastmod>2025-11-14</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
   <!-- Contact Section -->
   <url>
     <loc>https://abhay-lal.me/#contact</loc>

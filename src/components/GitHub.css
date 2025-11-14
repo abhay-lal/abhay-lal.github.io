@@ -1,0 +1,147 @@
+.github__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.github__stats {
+  margin-bottom: 3rem;
+}
+
+.github__stats-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: center;
+  justify-items: center;
+}
+
+.github__stat-card {
+  width: 100%;
+  max-width: 500px;
+  background: linear-gradient(135deg, rgba(38, 38, 38, 0.9) 0%, rgba(26, 26, 26, 0.9) 100%);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  border: 2px solid rgba(192, 192, 192, 0.3);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.github__stat-card:hover {
+  border-color: var(--first-color);
+  box-shadow: 0 8px 24px rgba(192, 192, 192, 0.4),
+              0 0 20px rgba(192, 192, 192, 0.3);
+}
+
+.github__stat-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0.5rem;
+}
+
+.github__contributions,
+.github__streak {
+  margin-bottom: 3rem;
+}
+
+.github__contributions-title {
+  font-size: var(--h2-font-size);
+  color: var(--title-color);
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-family: var(--heading-font);
+}
+
+.github__graph,
+.github__streak-card {
+  width: 100%;
+  background: linear-gradient(135deg, rgba(38, 38, 38, 0.9) 0%, rgba(26, 26, 26, 0.9) 100%);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  border: 2px solid rgba(192, 192, 192, 0.3);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.github__graph:hover,
+.github__streak-card:hover {
+  border-color: var(--first-color);
+  box-shadow: 0 8px 24px rgba(192, 192, 192, 0.4),
+              0 0 20px rgba(192, 192, 192, 0.3);
+}
+
+.github__graph img,
+.github__streak-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0.5rem;
+}
+
+.github__cta {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.github__button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+}
+
+.github__button .button__icon {
+  transition: transform 0.3s ease;
+}
+
+.github__button:hover .button__icon {
+  transform: translateX(0.5rem);
+}
+
+/* Responsive Design */
+@media screen and (min-width: 568px) {
+  .github__stat-card {
+    max-width: 450px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .github__container {
+    padding: 0 2rem;
+  }
+
+  .github__stats-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .github__stat-card {
+    max-width: none;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .github__container {
+    max-width: 1400px;
+  }
+
+  .github__stats-row {
+    gap: 2.5rem;
+  }
+
+  .github__stat-card,
+  .github__graph,
+  .github__streak-card {
+    padding: 2rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .github__container {
+    max-width: 1600px;
+  }
+}
+

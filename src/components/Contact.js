@@ -11,11 +11,38 @@ const Contact = () => {
 
   return (
     <section className="contact section" id="contact" ref={ref}>
+      {/* LinkedIn Section */}
       <motion.h2
         className="section__title"
         initial={{ opacity: 0, y: -20 }}
         animate={inView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.5 }}
+      >
+        LinkedIn
+      </motion.h2>
+      <motion.div
+        className="contact__linkedin"
+        initial={{ opacity: 0, y: 50 }}
+        animate={inView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.6, delay: 0.3 }}
+      >
+        <iframe
+          src='https://widgets.sociablekit.com/linkedin-profile-posts/iframe/25434862'
+          frameBorder='0'
+          width='75%'
+          height='700'
+          style={{ display: 'block', margin: '2rem auto 0' }}
+          loading='lazy'
+          title='LinkedIn posts widget'
+        />
+      </motion.div>
+
+      {/* Contact Section */}
+      <motion.h2
+        className="section__title contact__title-spacing"
+        initial={{ opacity: 0, y: -20 }}
+        animate={inView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.5, delay: 0.5 }}
       >
         Contact
       </motion.h2>
@@ -23,7 +50,7 @@ const Contact = () => {
         className="section__subtitle"
         initial={{ opacity: 0 }}
         animate={inView ? { opacity: 1 } : {}}
-        transition={{ duration: 0.5, delay: 0.2 }}
+        transition={{ duration: 0.5, delay: 0.7 }}
       >
         Get in touch with me
       </motion.span>
@@ -32,7 +59,7 @@ const Contact = () => {
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={inView ? { opacity: 1, x: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.3 }}
+          transition={{ duration: 0.6, delay: 0.8 }}
         >
           <a href="mailto:abhay.lal.cs@gmail.com" className="contact__link">
             <motion.div
@@ -61,22 +88,6 @@ const Contact = () => {
           </motion.div>
         </motion.div>
       </div>
-
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        animate={inView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.6, delay: 0.5 }}
-      >
-        <iframe
-          src='https://widgets.sociablekit.com/linkedin-profile-posts/iframe/25434862'
-          frameBorder='0'
-          width='75%'
-          height='700'
-          style={{ display: 'block', margin: '2rem auto 0' }}
-          loading='lazy'
-          title='LinkedIn posts widget'
-        />
-      </motion.div>
     </section>
   );
 };
