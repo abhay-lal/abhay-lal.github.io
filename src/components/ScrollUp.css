@@ -1,0 +1,26 @@
+.scrollup {
+  position: fixed;
+  right: 1rem;
+  bottom: 5rem;
+  background: linear-gradient(135deg, #a8a8a8 0%, #c0c0c0 50%, #d4d4d4 100%);
+  opacity: .9;
+  padding: 0 .3rem;
+  border-radius: .4rem;
+  z-index: var(--z-tooltip);
+  transition: all .4s ease;
+  box-shadow: 0 4px 12px rgba(192, 192, 192, 0.3);
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+.scrollup:hover {
+  background: linear-gradient(135deg, #c0c0c0 0%, #d4d4d4 50%, #e8e8e8 100%);
+  box-shadow: 0 6px 20px rgba(192, 192, 192, 0.5);
+  transform: translateY(-3px);
+}
+
+.scrollup__icon {
+  font-size: 1.5rem;
+  color: #0a0a0a;
+  font-weight: bold;
+}
+
