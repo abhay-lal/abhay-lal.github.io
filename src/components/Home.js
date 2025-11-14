@@ -176,7 +176,7 @@ const Home = () => {
               >
                 Resume <i className="uil uil-file button__icon"></i>
               </a>
-            </motion.div>
+            </div>
           </motion.div>
         </div>
 
@@ -184,7 +184,7 @@ const Home = () => {
           className="home__scroll"
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 1 } : {}}
-          transition={{ duration: 0.6, delay: 1 }}
+          transition={{ duration: 0.4, delay: 0.4 }}
         >
           <a href="#about" className="home__scroll-button button--flex">
             <i className="uil uil-mouse-alt home__scroll-mouse"></i>
