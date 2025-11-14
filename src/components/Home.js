@@ -44,36 +44,113 @@ const Home = () => {
             ))}
           </motion.div>
 
-          <motion.div
-            className="home__img"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={inView ? { opacity: 1, scale: 1 } : {}}
-            transition={{ duration: 0.6 }}
-          >
-            <svg className="home__blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg">
-              <title>Abhay Lal portrait</title>
-              <defs>
-                <linearGradient id="silver-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" style={{ stopColor: '#a8a8a8', stopOpacity: 1 }} />
-                  <stop offset="50%" style={{ stopColor: '#c0c0c0', stopOpacity: 1 }} />
-                  <stop offset="100%" style={{ stopColor: '#d4d4d4', stopOpacity: 1 }} />
-                </linearGradient>
-                <clipPath id="circleClip">
-                  <circle cx="90" cy="90" r="78" />
-                </clipPath>
-              </defs>
-              <circle cx="90" cy="90" r="78" fill="url(#silver-gradient)" />
-              <image
-                className="home__blob-img"
-                x="6.5"
-                y="0"
-                width="187"
-                height="187"
-                xlinkHref="../assets/img/abhay_new.png"
-                clipPath="url(#circleClip)"
-              />
-            </svg>
-          </motion.div>
+                  <motion.div
+                    className="home__img home__tech-scene"
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={inView ? { opacity: 1, scale: 1 } : {}}
+                    transition={{ duration: 0.6 }}
+                  >
+                    <div className="tech-hud">
+                      {/* Central Python Logo */}
+                      <motion.div
+                        className="hud-core"
+                        animate={{
+                          scale: [1, 1.05, 1],
+                        }}
+                        transition={{
+                          duration: 3,
+                          repeat: Infinity,
+                          ease: "easeInOut"
+                        }}
+                      >
+                        <i className="fab fa-python"></i>
+                      </motion.div>
+
+                      {/* Circular Text */}
+                      <motion.div
+                        className="circular-text"
+                        animate={{ rotate: 360 }}
+                        transition={{
+                          duration: 20,
+                          repeat: Infinity,
+                          ease: "linear"
+                        }}
+                      >
+                        <svg viewBox="0 0 200 200" className="circular-text-svg">
+                          <defs>
+                            <path
+                              id="circlePath"
+                              d="M 100, 100 m -75, 0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0"
+                            />
+                          </defs>
+                          <text className="circular-text-path">
+                            <textPath href="#circlePath" startOffset="0%">
+                              SOFTWARE ENGINEERING • AI • DATA SCIENCE • 
+                            </textPath>
+                          </text>
+                        </svg>
+                      </motion.div>
+
+                      {/* Rotating Tech Stack Icons */}
+                      <motion.div
+                        className="tech-icons-ring"
+                        animate={{ rotate: 360 }}
+                        transition={{
+                          duration: 30,
+                          repeat: Infinity,
+                          ease: "linear"
+                        }}
+                      >
+                        {[
+                          { icon: 'fab fa-react', angle: 0 },
+                          { icon: 'fab fa-node-js', angle: 40 },
+                          { icon: 'fab fa-docker', angle: 80 },
+                          { icon: 'fab fa-aws', angle: 120 },
+                          { icon: 'fas fa-fire', angle: 160, label: 'PyTorch' },
+                          { type: 'text', text: 'TF', angle: 200, label: 'TensorFlow' },
+                          { icon: 'fab fa-git-alt', angle: 240 },
+                          { icon: 'fab fa-linux', angle: 280 },
+                          { icon: 'fab fa-js', angle: 320 },
+                        ].map((tech, i) => (
+                          <div
+                            key={i}
+                            className="tech-icon"
+                            style={{
+                              '--tech-angle': `${tech.angle}deg`,
+                            }}
+                          >
+                            {tech.type === 'text' ? (
+                              <motion.span
+                                className="tech-text-icon"
+                                animate={{
+                                  rotate: 360,
+                                }}
+                                transition={{
+                                  duration: 8,
+                                  repeat: Infinity,
+                                  ease: "linear"
+                                }}
+                              >
+                                {tech.text}
+                              </motion.span>
+                            ) : (
+                              <motion.i
+                                className={tech.icon}
+                                animate={{
+                                  rotate: 360,
+                                }}
+                                transition={{
+                                  duration: 8,
+                                  repeat: Infinity,
+                                  ease: "linear"
+                                }}
+                              />
+                            )}
+                          </div>
+                        ))}
+                      </motion.div>
+                    </div>
+                  </motion.div>
 
           <motion.div
             className="home__data"
