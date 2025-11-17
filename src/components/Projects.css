@@ -1,10 +1,10 @@
 .portfolio__container {
   overflow: hidden;
-  padding-bottom: 3rem;
+  padding-bottom: 4.5rem; /* Increased for more space below pagination dots */
   position: relative;
-  max-width: 1400px;
+  max-width: 1000px; /* Reduced from 1400px */
   margin: 0 auto;
-  width: 95%;
+  width: 80%; /* Reduced from 95% */
 }
 
 .portfolio-swiper {
@@ -31,6 +31,11 @@
   font-weight: 900;
 }
 
+.portfolio-swiper .swiper-pagination {
+  bottom: 0 !important;
+  padding-bottom: 0.5rem;
+}
+
 .portfolio-swiper .swiper-pagination-bullet {
   background-color: var(--first-color);
   opacity: 0.5;
@@ -45,11 +50,7 @@
 .portfolio__content {
   padding: 0 1.5rem;
   overflow: hidden;
-  transition: transform 0.3s ease;
-}
-
-.portfolio__content:hover {
-  transform: translateY(-5px);
+  /* Removed hover animation */
 }
 
 .portfolio__img {
@@ -79,7 +80,7 @@
   border-color: var(--first-color);
   box-shadow: 0 8px 24px rgba(192, 192, 192, 0.4),
               0 0 20px rgba(192, 192, 192, 0.3);
-  transform: scale(1.05);
+  /* Removed scale animation */
 }
 
 .portfolio__img:hover::after {
@@ -115,8 +116,8 @@
 
 @media screen and (min-width: 768px) {
   .portfolio__container {
-    width: 90%;
-    max-width: 1600px;
+    width: 75%; /* Reduced from 90% */
+    max-width: 1200px; /* Reduced from 1600px */
   }
 
   .portfolio__img {
@@ -135,8 +136,8 @@
 
 @media screen and (min-width: 1024px) {
   .portfolio__container {
-    width: 92%;
-    max-width: 1800px;
+    width: 78%; /* Reduced from 92% */
+    max-width: 1300px; /* Reduced from 1800px */
   }
 
   .portfolio__img {
@@ -160,8 +161,8 @@
 
 @media screen and (min-width: 1400px) {
   .portfolio__container {
-    width: 95%;
-    max-width: 2000px;
+    width: 80%; /* Reduced from 95% */
+    max-width: 1400px; /* Reduced from 2000px */
   }
 
   .portfolio__img {

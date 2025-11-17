@@ -1,11 +1,15 @@
 .testimonial__container {
-  padding-bottom: 3rem;
+  padding-bottom: 4.5rem; /* Increased for more space below pagination dots */
   position: relative;
   overflow: hidden;
+  max-width: 1000px; /* Reduced width to match Projects */
+  margin: 0 auto;
+  width: 80%; /* Reduced width */
 }
 
 .publications-swiper {
   padding: 0 50px;
+  width: 100%;
 }
 
 .publications-swiper .swiper-button-next,
@@ -25,6 +29,11 @@
 .publications-swiper .swiper-button-prev::after {
   font-size: 2rem;
   font-weight: 900;
+}
+
+.publications-swiper .swiper-pagination {
+  bottom: 0 !important;
+  padding-bottom: 0.5rem;
 }
 
 .publications-swiper .swiper-pagination-bullet {
@@ -52,6 +61,7 @@
   box-shadow: 0 8px 24px rgba(192, 192, 192, 0.4),
               0 0 30px rgba(192, 192, 192, 0.2);
   border: 2px solid var(--first-color);
+  /* Removed scale/transform animations */
 }
 
 .testimonial__data,
@@ -96,14 +106,41 @@
   line-height: 1.8;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
+  .testimonial__container {
+    width: 75%; /* Reduced width */
+    max-width: 1200px;
+  }
+
   .publications-swiper {
-    padding: 0 60px;
+    padding: 0 70px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .testimonial__container {
+    width: 78%; /* Reduced width */
+    max-width: 1300px;
+  }
+
+  .publications-swiper {
+    padding: 0 80px;
   }
 
   .publications-swiper .swiper-button-next::after,
   .publications-swiper .swiper-button-prev::after {
     font-size: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .testimonial__container {
+    width: 80%; /* Reduced width */
+    max-width: 1400px;
+  }
+
+  .publications-swiper {
+    padding: 0 100px;
   }
 }
 

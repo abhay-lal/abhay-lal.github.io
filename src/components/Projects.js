@@ -16,6 +16,18 @@ const Projects = () => {
 
   const projects = [
     {
+      img: '../assets/img/ai-work.png',
+      title: 'Visper - Voice-First RAG Assistant',
+      description: 'Voice-first RAG assistant for repositories. Paste a GitHub URL and talk to your code in real-time with grounded citations. Converts JSON summaries into elegant slides with synchronized TTS narration and MP4 output, designed with accessibility in mind for blind developers. Built with Python, Gemini, FastAPI, and RAG.',
+      link: 'https://github.com/abhay-lal/Visper',
+    },
+    {
+      img: '../assets/img/ai-work-2.png',
+      title: 'AI Safety Protocol',
+      description: 'Built a code guardrail system with regex checks, Llama Guard 4, and Cerebras inference for LLM safety. Developed code-aware filters detecting prompt injection, jailbreak, and backdoor threats in AI agents. Implemented multi-agent validation with real-time telemetry and Flask-based semantic moderation dashboard.',
+      link: 'https://github.com/abhay-lal/AI-Safety-Protocol',
+    },
+    {
       img: '../assets/img/MusicCRS.png',
       title: 'Benchmarking Music Conversational Recommendation',
       description: 'Built a novel multi-modal dataset by combining Reddit dialogues with YouTube audio (FFmpeg, Python). Implemented entity linking and benchmarked LLMs (Qwen-2.5-7B) using PyTorch Transformers.',
@@ -112,10 +124,11 @@ const Projects = () => {
           modules={[Navigation, Pagination, Autoplay]}
           loop={true}
           autoplay={{
-            delay: 5000,
+            delay: 3000, /* Changes every 3 seconds */
             disableOnInteraction: false,
-            pauseOnMouseEnter: true,
+            pauseOnMouseEnter: false, /* Keeps moving even on hover */
           }}
+          speed={600} /* Normal transition speed */
           navigation={true}
           pagination={{
             clickable: true,

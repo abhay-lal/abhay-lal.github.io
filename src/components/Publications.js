@@ -93,10 +93,11 @@ const Publications = () => {
           grabCursor={true}
           spaceBetween={48}
           autoplay={{
-            delay: 6000,
+            delay: 3000, /* Changes every 3 seconds */
             disableOnInteraction: false,
-            pauseOnMouseEnter: true,
+            pauseOnMouseEnter: false, /* Keeps moving even on hover */
           }}
+          speed={600} /* Normal transition speed */
           navigation={true}
           pagination={{
             clickable: true,
