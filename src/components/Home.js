@@ -169,7 +169,7 @@ const Home = () => {
                 Contact <i className="uil uil-message button__icon"></i>
               </a>
               <a
-                href="https://drive.google.com/file/d/1GsdrzVfbHQhN-uae1LuQfqFN4DmwU5Jq/view?usp=sharing"
+                href="https://drive.google.com/file/d/1casu6Y7gu1fHugDdG9rNaMCmcRVclvwq/view?usp=sharing"
                 className="button button--flex"
                 target="_blank"
                 rel="noopener noreferrer"
