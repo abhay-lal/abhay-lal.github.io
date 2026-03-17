@@ -16,49 +16,74 @@ const Publications = () => {
 
   const publications = [
     {
-      title: 'Gait speed based individual Recognition model using deep 2-D convolutional neural network',
-      conference: 'International Conference on Computer Communication and Informatics (ICCCI)',
-      status: 'Published',
-      link: 'https://ieeexplore.ieee.org/abstract/document/10128342',
-      doi: '10.1109/ICCCI56745.2023.10128342',
-      authors: 'Abhay Lal; P Nithyakani',
-      description: 'Developed a custom 2-D Convolutional Neural Network using thermal infrared night images from CASIA C dataset for gait-based individual recognition, comparison and optimized classification of walking conditions outperformed pre-trained models.',
-    },
-    {
-      title: 'Human Gait Recognition Using Cross View Micro Gait Dataset with Light weight MobileNet',
-      conference: 'International Conference on Recent Advances in Electrical, Electronics, Ubiquitous Communication, and Computational Intelligence (RAEEUCCI)',
-      status: 'Published',
-      link: 'https://ieeexplore.ieee.org/abstract/document/10134510',
-      doi: '10.1109/RAEEUCCI57140.2023.10134510',
-      authors: 'Haripreeth Dwarakanath Avarur; Abhay Lal; Nithyakani P; Aryan Sinha; Gajulapalli Naga Vyshnavi; Shruthi Kannan',
-      description: 'Implemented gait recognition using a lightweight MobileNet model on the Custom-made Cross View Micro Gait Dataset, surpassing existing methods for human identification from cross-view videos.',
-    },
-    {
-      title: 'ALATS: Analysis of localization algorithms in terrestrial surveillance bots',
-      conference: 'IEEE International Conference on Electronics, Computing and Communication Technologies (CONECCT)',
-      status: 'Published',
-      link: 'https://ieeexplore.ieee.org/abstract/document/10234740',
-      doi: '10.1109/CONECCT57959.2023.10234740',
-      authors: 'Vaishnavi Moorthy; Darshil Shah; Shresth Kapoor; Srinivas Tb; Abhay Lal',
-      description: 'Designed and executed a state-of-the-art surveillance system on a Raspberry Pi, harnessing the YOLOv7 model and OpenCV to craft a compact, high-performance autonomous surveillance robot.',
-    },
-    {
       title: 'Automated screening of hip X-rays for osteoporosis by Singh\'s index using machine learning algorithms',
-      conference: 'Indian Journal of Orthopaedics, Springer',
+      venue: 'Indian Journal of Orthopaedics',
+      year: '2024',
       status: 'Published',
       link: 'https://doi.org/10.1007/s43465-024-01246-9',
-      doi: '10.1007/s43465-024-01246-9',
-      authors: 'Vijaya Kalavakonda, Sameer Mohamed, Abhay Lal, Sathish Muthu',
-      description: 'Developed and evaluated machine learning models for automating osteoporosis diagnosis using the Singh Index from hip radiographs, with the stacked CNN achieving superior accuracy (93.6%) and balanced metrics, making it the most reliable tool for clinical screening.',
+      linkLabel: '10.1007/s43465-024-01246-9',
+      authors: 'Vijaya Kalavakonda, Sameer Mohamed, Lal Abhay, Sathish Muthu',
+      description: 'This work automates Singh Index based osteoporosis screening from hip radiographs using machine learning pipelines on an annotated clinical dataset. The study compares ViT, MobileNet-V3, and stacked CNN approaches for practical radiology support.',
+    },
+    {
+      title: 'Human gait recognition using cross view micro gait dataset with light weight MobileNet',
+      venue: 'International Conference on Recent Advances in Electrical, Electronics, Ubiquitous Communication, and Computational Intelligence (RAEEUCCI)',
+      year: '2023',
+      status: 'Published',
+      link: 'https://ieeexplore.ieee.org/abstract/document/10134510',
+      linkLabel: '10.1109/RAEEUCCI57140.2023.10134510',
+      authors: 'Haripreeth Dwarakanath Avarur, Abhay Lal, Aryan Sinha, Gajulapalli Naga Vyshnavi, Shruthi Kannan',
+      description: 'The paper introduces cross-view micro-gait modeling for person identification in surveillance conditions and benchmarks classical and deep models. A lightweight MobileNet-based solution delivers strong real-world cross-view recognition performance.',
+    },
+    {
+      title: 'Musicrs: Benchmarking audio-centric conversational recommendation',
+      venue: 'arXiv preprint arXiv:2509.19469',
+      year: '2025',
+      status: 'Preprint',
+      link: 'https://arxiv.org/abs/2509.19469',
+      linkLabel: 'arXiv:2509.19469',
+      authors: 'Rohan Surana*, Amit Namburi*, Gagan Mundada*, Abhay Lal*, Zachary Novack, Julian McAuley, Junda Wu',
+      description: 'MusiCRS provides an audio-grounded conversational recommendation benchmark linking real Reddit conversations with song-level audio context. Results highlight persistent multimodal grounding gaps in current recommendation systems.',
+    },
+    {
+      title: 'Gait speed based individual recognition model using deep 2-D convolutional neural network',
+      venue: 'International Conference on Computer Communication and Informatics (ICCCI)',
+      year: '2023',
+      status: 'Published',
+      link: 'https://ieeexplore.ieee.org/abstract/document/10128342',
+      linkLabel: '10.1109/ICCCI56745.2023.10128342',
+      authors: 'Abhay Lal, P Nithyakani',
+      description: 'This paper evaluates gait-speed-aware individual recognition across multiple walking conditions using thermal infrared imagery from CASIA-C. A custom 2D CNN is compared with transfer-learning baselines and shows robust classification performance.',
     },
     {
       title: 'Unsupervised Machine Learning for Osteoporosis Diagnosis Using Singh Index Clustering on Hip Radiographs',
-      conference: 'arXiv preprint arXiv:2411.15253',
-      status: 'Published',
-      link: 'https://doi.org/10.48550/arXiv.2411.15253',
-      doi: '10.48550/arXiv.2411.15253',
+      venue: 'arXiv preprint arXiv:2411.15253',
+      year: '2024',
+      status: 'Preprint',
+      link: 'https://arxiv.org/abs/2411.15253',
+      linkLabel: 'arXiv:2411.15253',
       authors: 'Vimaladevi Madhivanan, Kalavakonda Vijaya, Abhay Lal, Senthil Rithika, Shamala Karupusamy Subramaniam, Mohamed Sameer',
-      description: 'This study addressed the global challenge of osteoporosis by developing a machine learning-based approach to automate Singh Index (SI) identification from hip radiographs, utilizing a custom convolutional neural network for feature extraction and clustering, while highlighting the need for balanced datasets, improved image quality, and the integration of clinical data to enhance diagnostic accuracy.',
+      description: 'The study explores unsupervised clustering of hip radiographs for Singh Index grade discovery with a custom CNN feature extractor. It analyzes data quality and class balance effects, and outlines practical improvements for clinical-grade automation.',
+    },
+    {
+      title: 'Hierarchical Vegetation Classification for Wildfire Risk Assessment using the National Data Platform',
+      venue: "ICPP Workshops '25: Workshop Proceedings of the 54th International Conference on Parallel Processing",
+      year: '2025',
+      status: 'Published',
+      link: 'https://scholar.google.com/citations?view_op=view_citation&hl=en&user=TsTzc9AAAAAJ&citation_for_view=TsTzc9AAAAAJ:IjCSPb-OGe4C',
+      linkLabel: 'Google Scholar entry',
+      authors: 'Yash Vishe*, Abhay Lal*, Parasnis* Guruprasad',
+      description: 'This work introduces a hierarchical ML framework on the National Data Platform to classify vegetation at plant functional type, genus, and species levels. The taxonomy-aware pipeline supports better wildfire fuel and risk characterization.',
+    },
+    {
+      title: 'ALATS: Analysis of localization algorithms in terrestrial surveillance bots',
+      venue: 'IEEE International Conference on Electronics, Computing and Communication Technologies (CONECCT)',
+      year: '2023',
+      status: 'Published',
+      link: 'https://ieeexplore.ieee.org/abstract/document/10234740',
+      linkLabel: '10.1109/CONECCT57959.2023.10234740',
+      authors: 'Vaishnavi Moorthy, Darshil Shah, Shresth Kapoor, Srinivas Tb, Abhay Lal',
+      description: 'ALATS studies localization and navigation methods for terrestrial surveillance bots that combine SLAM, object detection, and onboard sensing. The system targets practical, autonomous monitoring under constrained hardware settings.',
     },
   ];
 
@@ -120,9 +145,9 @@ const Publications = () => {
                     <div>
                       <h3 className="testimonial__name">{pub.title}</h3>
                       <span className="testimonial__client">
-                        Conference: {pub.conference} | Progress: <i>{pub.status}</i>
+                        Venue: {pub.venue} | Year: {pub.year} | Status: <i>{pub.status}</i>
                         <br />
-                        Link: <a href={pub.link} target="_blank" rel="noopener noreferrer">{pub.doi}</a>
+                        Link: <a href={pub.link} target="_blank" rel="noopener noreferrer">{pub.linkLabel}</a>
                         <br />
                         Author(s): {pub.authors}
                       </span>

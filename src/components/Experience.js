@@ -31,55 +31,49 @@ const Experience = () => {
   const workData = [
     {
       logo: '../assets/img/ucsd.png',
-      title: 'Graduate Student Researcher',
-      institution: 'UC San Diego Health • La Jolla, CA',
+      title: 'Graduate Research Data Scientist',
+      institution: 'UC San Diego Health • San Diego, CA',
       details: [
-        'Refactored 5k+ LOC MATLAB neuroimaging code into modular Python pipelines, reducing runtime by 20%.',
-        'Applied scalable feature selection and nested cross-validation to 10k+ MRI scans, ensuring reproducibility.',
-        'Developed predictive models (Logistic Regression, SVM) on structural/diffusion MRI using multi-modal data.',
-        'Collaborated with neuroscientists to integrate mixed-effects models into production-ready research pipelines.',
+        'Refactored 5000+ lines of MATLAB neuroimaging code into modular Python ML pipelines for scalable experimentation.',
+        'Processed 10K+ multimodal MRI scans integrating imaging, genetic, and environmental predictors for large-scale analysis.',
+        'Built reproducible modeling pipelines across 5K+ participants using group-aware cross-validation and covariate correction.',
+        'Trained Logistic Regression and SVM models combining 15+ multimodal feature sets for neuropsychiatric prediction.',
+        'Applied SHAP explainability to quantify predictor importance, achieving 0.70 AUC with multimodal stacked classifiers.',
       ],
       date: 'Jan 2025 - Present',
     },
     {
       logo: '../assets/img/iitb.png',
-      title: 'Research Intern (IRCC)',
-      institution: 'Indian Institute of Technology Bombay',
+      title: 'Intern',
+      institution: 'Indian Institute of Technology Bombay • Mumbai, IN',
       details: [
-        'Incorporated Computer Vision techniques for affective engagement to analyze peak emotions in 100+ participant interactions.',
-        'Annotated over 30,000 video frames and utilized YOLOv8 for detecting cognitive engagement.',
+        'Designed YOLOv8 and Docker computer vision pipelines on NVIDIA GPUs; processed 30k+ frames efficiently.',
+        'Cut training time from 5 to 3 hrs/run; delivered REST microservices for real-time engagement signals.',
+        'Analyzed 80k+ study-log entries with valence-arousal modeling to quantify engagement signals.',
       ],
       date: 'Jan 2024 - Jun 2024',
     },
     {
       logo: '../assets/img/wells.png',
-      title: 'Intern Analyst (CEDA)',
-      institution: 'Wells Fargo',
+      title: 'Intern',
+      institution: 'Wells Fargo • Hyderabad, IN',
       details: [
-        'Developed a Python-based data extraction tool using regex, text parsing, and NLP, reducing manual processing time by 70%.',
-        'Applied LDA topic modeling on FHA Mortgage policies, achieving a 20% increase in classification accuracy.',
+        'Engineered scalable Python ETL pipelines using Pandas and SpaCy, processing 2,500+ FHA policy documents.',
+        'Deployed LDA topic modeling microservice via FastAPI; achieved 0.78 coherence score for text analytics.',
+        'Reduced manual review time from 4 hrs to 25 mins via regex-based topic tagging and structured analytics.',
       ],
       date: 'Jun 2023 - Aug 2023',
     },
     {
       logo: '../assets/img/sam.png',
-      title: 'Research Intern (PRISM)',
-      institution: 'Samsung R&D Institute India-Bangalore',
+      title: 'Intern',
+      institution: 'Samsung R&D Institute • Bangalore, IN',
       details: [
-        'Conducted forecasting on a French bakery dataset, achieving a 15% reduction in forecasting errors using SARIMA, Holt-Winters, LSTM.',
-        'Executed time series analysis exploring trends, seasonal effects, and confirmed data stationarity with ADF test.',
+        'Performed time-series EDA (decomposition, outliers, stationarity) on sales data across 12+ product lines.',
+        'Built SARIMA and LSTM forecasting models with sliding-window validation; improved MAE by 15%.',
+        'Awarded Certificate of Excellence plus $1200 PRISM reward for outstanding model performance.',
       ],
       date: 'Dec 2022 - Aug 2023',
-    },
-    {
-      logo: '../assets/img/nus.png',
-      title: 'Academic Intern',
-      institution: 'National University of Singapore',
-      details: [
-        'Leveraged Spacy for Named Entity Recognition and Deep neural network to develop a robust Resume Parser, achieving 96% precision.',
-        'Pioneered integration of cutting-edge Deep Learning optimization techniques; achieved a 10% increase in classification precision.',
-      ],
-      date: 'June 2022',
     },
   ];
 
@@ -169,28 +163,40 @@ const Experience = () => {
               {workData.map((item, index) => (
                 <motion.div
                   key={index}
-                  className="qualification__data"
+                  className="qualification__flip-card"
                   initial={{ opacity: 0, y: 30 }}
                   animate={inView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.5, delay: 0.1 * index }}
                 >
-                  <div className="qualification__header">
-                    <img src={item.logo} alt={item.institution} className="qualification__logo" loading="lazy" />
-                    <div className="qualification__info">
-                      <h3 className="qualification__title">{item.title}</h3>
-                      <span className="qualification__subtitle">{item.institution}</span>
-                    </div>
-                  </div>
-                  <div className="qualification__details">
-                    {item.details.map((detail, i) => (
-                      <div key={i} style={{ marginBottom: '0.5rem' }}>
-                        • {detail}
+                  <div className="qualification__flip-card-inner">
+                    <div className="qualification__flip-face qualification__flip-face--front">
+                      <div className="qualification__header">
+                        <img src={item.logo} alt={item.institution} className="qualification__logo" loading="lazy" />
+                        <div className="qualification__info">
+                          <h3 className="qualification__title">{item.title}</h3>
+                          <span className="qualification__subtitle">{item.institution}</span>
+                        </div>
                       </div>
-                    ))}
-                  </div>
-                  <div className="qualification__calendar">
-                    <i className="uil uil-calendar-alt"></i>
-                    {item.date}
+                      <div className="qualification__calendar">
+                        <i className="uil uil-calendar-alt"></i>
+                        {item.date}
+                      </div>
+                      <div className="qualification__flip-hint">Hover to view contributions</div>
+                    </div>
+
+                    <div className="qualification__flip-face qualification__flip-face--back">
+                      <div className="qualification__details">
+                        {item.details.map((detail, i) => (
+                          <div key={i} style={{ marginBottom: '0.5rem' }}>
+                            • {detail}
+                          </div>
+                        ))}
+                      </div>
+                      <div className="qualification__calendar">
+                        <i className="uil uil-calendar-alt"></i>
+                        {item.date}
+                      </div>
+                    </div>
                   </div>
                 </motion.div>
               ))}

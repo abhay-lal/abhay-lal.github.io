@@ -11,6 +11,7 @@ import GitHub from './components/GitHub';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ScrollUp from './components/ScrollUp';
+import ParticlesBackground from './components/ParticlesBackground';
 
 function App() {
   const [activeSection, setActiveSection] = useState('home');
@@ -37,6 +38,7 @@ function App() {
 
   return (
     <div className="App">
+      <ParticlesBackground />
       <Header activeSection={activeSection} />
       <main className="main">
         <Home />

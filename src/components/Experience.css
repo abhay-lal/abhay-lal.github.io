@@ -15,8 +15,8 @@
 
 .qualification__button:hover {
   color: var(--first-color);
-  background-color: rgba(192, 192, 192, 0.1);
-  box-shadow: 0 0 15px rgba(192, 192, 192, 0.2);
+  background-color: rgba(var(--accent-rgb), 0.1);
+  box-shadow: 0 0 12px rgba(var(--accent-rgb), 0.2);
 }
 
 .qualification__button.qualification__active {
@@ -33,20 +33,120 @@
   margin: 0 auto;
 }
 
+.qualification__flip-card {
+  perspective: 1200px;
+  margin: 0 auto var(--mb-2-5);
+  max-width: 780px;
+  min-height: 320px;
+}
+
+.qualification__flip-card-inner {
+  position: relative;
+  width: 100%;
+  min-height: 320px;
+  transform-style: preserve-3d;
+  transition: transform 0.7s ease;
+}
+
+.qualification__flip-card:hover .qualification__flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.qualification__flip-face {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(145deg, rgba(15, 21, 36, 0.92) 0%, rgba(11, 17, 30, 0.97) 55%, rgba(13, 19, 33, 0.95) 100%);
+  border: 2px solid rgba(var(--accent-rgb), 0.35);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 10px 24px rgba(4, 7, 16, 0.65), 0 0 12px rgba(var(--accent-rgb), 0.14);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.qualification__flip-face::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 10% 12%, rgba(var(--accent-rgb), 0.14), transparent 50%);
+  pointer-events: none;
+}
+
+.qualification__flip-face > * {
+  position: relative;
+  z-index: 1;
+}
+
+.qualification__flip-face--front {
+  justify-content: space-between;
+}
+
+.qualification__flip-face--front .qualification__header {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.75rem;
+}
+
+.qualification__flip-face--front .qualification__info {
+  text-align: center;
+}
+
+.qualification__flip-face--front .qualification__calendar {
+  justify-content: center;
+}
+
+.qualification__flip-face--back {
+  transform: rotateY(180deg);
+  justify-content: space-between;
+}
+
+.qualification__flip-face--back .qualification__details {
+  overflow-y: auto;
+  padding-right: 0.2rem;
+}
+
+.qualification__flip-card:hover .qualification__flip-face {
+  border-color: var(--first-color);
+  box-shadow: 0 14px 30px rgba(4, 7, 16, 0.68), 0 0 24px rgba(var(--accent-rgb), 0.26);
+}
+
+.qualification__flip-hint {
+  margin-top: 0.8rem;
+  font-size: var(--small-font-size);
+  color: var(--text-color-light);
+  opacity: 0.85;
+  font-style: italic;
+  text-align: center;
+}
+
 .qualification__data {
-  background: linear-gradient(135deg, rgba(38, 38, 38, 0.9) 0%, rgba(26, 26, 26, 0.9) 100%);
-  border: 2px solid rgba(192, 192, 192, 0.3);
+  background: linear-gradient(145deg, rgba(15, 21, 36, 0.92) 0%, rgba(11, 17, 30, 0.97) 55%, rgba(13, 19, 33, 0.95) 100%);
+  border: 2px solid rgba(var(--accent-rgb), 0.35);
   border-radius: 1rem;
   padding: 2rem;
   margin-bottom: var(--mb-2-5);
   transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 24px rgba(4, 7, 16, 0.65), 0 0 12px rgba(var(--accent-rgb), 0.14);
+  position: relative;
+  overflow: hidden;
+}
+
+.qualification__data::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 10% 12%, rgba(var(--accent-rgb), 0.14), transparent 50%);
+  pointer-events: none;
 }
 
 .qualification__data:hover {
   border-color: var(--first-color);
-  box-shadow: 0 8px 24px rgba(192, 192, 192, 0.4),
-              0 0 30px rgba(192, 192, 192, 0.2);
+  box-shadow: 0 14px 30px rgba(4, 7, 16, 0.68),
+              0 0 24px rgba(var(--accent-rgb), 0.26);
   transform: translateY(-5px);
 }
 
@@ -62,7 +162,7 @@
   height: 60px;
   object-fit: contain;
   flex-shrink: 0;
-  filter: drop-shadow(0 0 8px rgba(192, 192, 192, 0.3));
+  filter: drop-shadow(0 0 8px rgba(var(--accent-rgb), 0.3));
 }
 
 .qualification__info {
@@ -99,7 +199,7 @@
   color: var(--text-color-light);
   margin-top: 1rem;
   padding-top: 1rem;
-  border-top: 1px solid rgba(192, 192, 192, 0.2);
+  border-top: 1px solid rgba(var(--accent-rgb), 0.22);
 }
 
 .qualification__calendar i {
@@ -115,6 +215,30 @@
 }
 
 @media screen and (max-width: 768px) {
+  .qualification__flip-card {
+    min-height: auto;
+    max-width: 100%;
+  }
+
+  .qualification__flip-card-inner {
+    min-height: auto;
+    transform: none !important;
+  }
+
+  .qualification__flip-face {
+    position: relative;
+    backface-visibility: visible;
+    -webkit-backface-visibility: visible;
+  }
+
+  .qualification__flip-face--front {
+    display: none;
+  }
+
+  .qualification__flip-face--back {
+    transform: none;
+  }
+
   .qualification__data {
     padding: 1.5rem;
   }

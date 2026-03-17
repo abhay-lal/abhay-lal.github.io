@@ -6,7 +6,7 @@ const Footer = () => {
   const socialLinks = [
     { href: 'https://github.com/abhay-lal', icon: 'uil-github-alt', label: 'GitHub' },
     { href: 'https://www.linkedin.com/in/lal-abhay/', icon: 'uil-linkedin-alt', label: 'LinkedIn' },
-    { href: 'https://x.com/abbylaal', icon: 'uil-twitter', label: 'Twitter' },
+    { href: 'https://x.com/abbylaal', icon: null, label: 'X' },
     { href: 'https://scholar.google.com/citations?user=TsTzc9AAAAAJ&hl=en&oi=ao', icon: 'ai ai-google-scholar', label: 'Google Scholar' },
   ];
 
@@ -69,14 +69,24 @@ const Footer = () => {
                 whileHover={{ scale: 1.2, rotate: 5 }}
                 whileTap={{ scale: 0.9 }}
               >
-                <i className={link.icon}></i>
+                {link.icon ? (
+                  <i className={link.icon}></i>
+                ) : (
+                  <svg
+                    className="x-logo-icon"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path d="M18.244 2h3.064l-6.808 7.777L22.5 22h-6.266l-4.911-7.288L4.963 22H1.897l7.28-8.345L1.5 2h6.423l4.44 6.749L18.244 2z" />
+                  </svg>
+                )}
               </motion.a>
             ))}
           </motion.div>
         </div>
 
         <p className="footer__copy">
-          &#169; 2025 Abhay Lal. All rights reserved. All images on this personal portfolio are generated using A.I tools.
+          &#169; 2026 Abhay Lal. All rights reserved. All images on this personal portfolio are generated using A.I tools.
         </p>
       </div>
     </footer>
