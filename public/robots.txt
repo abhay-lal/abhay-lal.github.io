@@ -1,4 +1,4 @@
-# robots.txt for https://abhay-lal.github.io/
+# robots.txt for https://abhay-lal.me/
 
 User-agent: *
 Allow: /
@@ -7,7 +7,7 @@ Disallow: /private/
 Disallow: /api/
 
 # Sitemap location
-Sitemap: https://abhay-lal.github.io/sitemap.xml
+Sitemap: https://abhay-lal.me/sitemap.xml
 
 # Crawl-delay for polite bots
 Crawl-delay: 1
