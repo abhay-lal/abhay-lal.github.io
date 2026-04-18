@@ -2,74 +2,66 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
+
   <!-- Homepage -->
   <url>
-    <loc>https://abhay-lal.me/</loc>
-    <lastmod>2025-11-14</lastmod>
+    <loc>https://abhay-lal.github.io/</loc>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://abhay-lal.me/assets/img/abhay_new.png</image:loc>
-      <image:title>Abhay Lal - Machine Learning Engineer</image:title>
-      <image:caption>Portfolio photo of Abhay Lal</image:caption>
+      <image:loc>https://abhay-lal.github.io/assets/img/abhay_new.png</image:loc>
+      <image:title>Abhay Lal — AI/ML Engineer and Software Engineer</image:title>
+      <image:caption>Portfolio of Abhay Lal, MS CS at UC San Diego</image:caption>
     </image:image>
   </url>
-  
-  <!-- About Section -->
+
+  <!-- About -->
   <url>
-    <loc>https://abhay-lal.me/#about</loc>
-    <lastmod>2025-11-14</lastmod>
+    <loc>https://abhay-lal.github.io/#about</loc>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
-  
-  <!-- Skills Section -->
+
+  <!-- Experience -->
   <url>
-    <loc>https://abhay-lal.me/#skills</loc>
-    <lastmod>2025-11-14</lastmod>
+    <loc>https://abhay-lal.github.io/#experience</loc>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
-  
-  <!-- Experience/Qualification Section -->
+
+  <!-- Projects -->
   <url>
-    <loc>https://abhay-lal.me/#qualification</loc>
-    <lastmod>2025-11-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <!-- Projects/Portfolio Section -->
-  <url>
-    <loc>https://abhay-lal.me/#portfolio</loc>
-    <lastmod>2025-11-14</lastmod>
+    <loc>https://abhay-lal.github.io/#projects</loc>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-  
-  <!-- Publications/Testimonial Section -->
+
+  <!-- Publications -->
   <url>
-    <loc>https://abhay-lal.me/#testimonial</loc>
-    <lastmod>2025-11-14</lastmod>
+    <loc>https://abhay-lal.github.io/#publications</loc>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  
-  <!-- GitHub Activity Section -->
+
+  <!-- Skills -->
   <url>
-    <loc>https://abhay-lal.me/#github</loc>
-    <lastmod>2025-11-14</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
+    <loc>https://abhay-lal.github.io/#skills</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
-  
-  <!-- Contact Section -->
+
+  <!-- Contact -->
   <url>
-    <loc>https://abhay-lal.me/#contact</loc>
-    <lastmod>2025-11-14</lastmod>
+    <loc>https://abhay-lal.github.io/#contact</loc>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
-  
+
 </urlset>

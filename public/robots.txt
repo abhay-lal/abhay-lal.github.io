@@ -1,19 +1,18 @@
-# robots.txt for https://abhay-lal.me/
+# robots.txt for https://abhay-lal.github.io/
 
 User-agent: *
 Allow: /
 Disallow: /admin/
 Disallow: /private/
-Disallow: /*.json$
 Disallow: /api/
 
 # Sitemap location
-Sitemap: https://abhay-lal.me/sitemap.xml
+Sitemap: https://abhay-lal.github.io/sitemap.xml
 
 # Crawl-delay for polite bots
 Crawl-delay: 1
 
-# Specific bot rules
+# Allow all major search crawlers full access
 User-agent: Googlebot
 Allow: /
 
@@ -26,7 +25,10 @@ Allow: /
 User-agent: Slurp
 Allow: /
 
-# Block bad bots
+User-agent: LinkedInBot
+Allow: /
+
+# Rate-limit aggressive SEO bots
 User-agent: MJ12bot
 Disallow: /
 
