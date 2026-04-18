@@ -1,96 +1,58 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
 import './Contact.css';
 
-const Contact = () => {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
-
+const Contact = ({ data }) => {
   return (
-    <section className="contact section" id="contact" ref={ref}>
-      {/* LinkedIn Section */}
-      <motion.h2
-        className="section__title"
-        initial={{ opacity: 0, y: -20 }}
-        animate={inView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.5 }}
-      >
-        LinkedIn
-      </motion.h2>
-      <motion.div
-        className="contact__linkedin"
-        initial={{ opacity: 0, y: 50 }}
-        animate={inView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.6, delay: 0.3 }}
-      >
-        <iframe
-          src='https://widgets.sociablekit.com/linkedin-profile-posts/iframe/25434862'
-          frameBorder='0'
-          width='75%'
-          height='700'
-          style={{ display: 'block', margin: '2rem auto 0' }}
-          loading='lazy'
-          title='LinkedIn posts widget'
-        />
-      </motion.div>
-
-      {/* Contact Section */}
-      <motion.h2
-        className="section__title contact__title-spacing"
-        initial={{ opacity: 0, y: -20 }}
-        animate={inView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.5, delay: 0.5 }}
-      >
-        Contact
-      </motion.h2>
-      <motion.span
-        className="section__subtitle"
-        initial={{ opacity: 0 }}
-        animate={inView ? { opacity: 1 } : {}}
-        transition={{ duration: 0.5, delay: 0.7 }}
-      >
-        Get in touch with me
-      </motion.span>
-
-      <div className="contact__container container grid">
-        <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          animate={inView ? { opacity: 1, x: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.8 }}
-        >
-          <a href="mailto:abhay.lal.cs@gmail.com" className="contact__link">
-            <motion.div
-              className="contact__information"
-              whileHover={{ scale: 1.05, x: 10 }}
-              transition={{ duration: 0.3 }}
-            >
-              <i className="uil uil-envelope contact__icon"></i>
-              <div>
-                <h3 className="contact__title">Email</h3>
-                <span className="contact__subtitle">abhay.lal.cs@gmail.com</span>
-              </div>
-            </motion.div>
-          </a>
-
-          <motion.div
-            className="contact__information"
-            whileHover={{ scale: 1.05, x: 10 }}
-            transition={{ duration: 0.3 }}
-          >
-            <i className="uil uil-map-marker contact__icon"></i>
-            <div>
-              <h3 className="contact__title">Location</h3>
-              <span className="contact__subtitle">San Diego, CA | USA</span>
+    <section className="section" id="contact">
+      <div className="page">
+        <div className="section-head">
+          <div className="section-num">§ 06 / CONTACT</div>
+          <h2 className="section-title">Say hello.</h2>
+          <div className="section-meta">REPLIES IN 24H</div>
+        </div>
+        <div className="contact-grid">
+          <h3 className="contact-big">
+            Drop a line<br />at{' '}
+            <a href={'mailto:' + data.meta.email}>
+              abhay.lal.cs<br />@gmail.com
+            </a>
+          </h3>
+          <div className="contact-side">
+            <a className="contact-link" href={'mailto:' + data.meta.email}>
+              <span className="contact-lb">Email</span>
+              <span className="contact-v">{data.meta.email}</span>
+              <span className="contact-arr">→</span>
+            </a>
+            <a className="contact-link" href={data.meta.links.linkedin} target="_blank" rel="noopener noreferrer">
+              <span className="contact-lb">LinkedIn</span>
+              <span className="contact-v">in/lal-abhay</span>
+              <span className="contact-arr">↗</span>
+            </a>
+            <a className="contact-link" href={data.meta.links.github} target="_blank" rel="noopener noreferrer">
+              <span className="contact-lb">GitHub</span>
+              <span className="contact-v">@abhay-lal</span>
+              <span className="contact-arr">↗</span>
+            </a>
+            <a className="contact-link" href={data.meta.links.scholar} target="_blank" rel="noopener noreferrer">
+              <span className="contact-lb">Scholar</span>
+              <span className="contact-v">Abhay Lal</span>
+              <span className="contact-arr">↗</span>
+            </a>
+            <a className="contact-link" href={data.meta.links.x} target="_blank" rel="noopener noreferrer">
+              <span className="contact-lb">X / Twitter</span>
+              <span className="contact-v">@abbylaal</span>
+              <span className="contact-arr">↗</span>
+            </a>
+            <div className="contact-link contact-link-static">
+              <span className="contact-lb">Based in</span>
+              <span className="contact-v">San Diego, CA</span>
+              <span className="contact-arr">●</span>
             </div>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
       </div>
     </section>
   );
 };
 
 export default Contact;
-

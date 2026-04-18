@@ -1,54 +1,92 @@
-.contact__container {
-  row-gap: 3rem;
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: end;
+}
+
+.contact-big {
+  font-family: var(--font-display);
+  font-size: clamp(40px, 6vw, 96px);
+  line-height: 0.95;
+  letter-spacing: -0.035em;
+  margin: 0;
+  font-weight: 500;
+  text-wrap: balance;
+}
+
+body[data-theme="serif"] .contact-big {
+  font-style: italic;
+  font-weight: 400;
+}
+
+.contact-big a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 2px solid var(--accent);
+}
+
+.contact-big a:hover {
+  opacity: 0.7;
+}
+
+.contact-side {
   display: flex;
   flex-direction: column;
+  gap: 18px;
+}
+
+.contact-link {
+  display: grid;
+  grid-template-columns: 100px 1fr 20px;
+  gap: 16px;
+  padding: 14px 0;
+  border-top: 1px solid var(--rule);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  text-decoration: none;
+  color: var(--fg);
+  transition: padding 0.2s;
   align-items: center;
 }
 
-.contact__link {
-  text-decoration: none;
-  color: inherit;
-  display: block;
-  width: 100%;
-  cursor: pointer;
+.contact-link:last-child {
+  border-bottom: 1px solid var(--rule);
 }
 
-.contact__information {
-  display: flex;
-  margin-bottom: var(--mb-2);
-  transition: transform 0.3s ease;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  background: linear-gradient(135deg, rgba(38, 38, 38, 0.8) 0%, rgba(26, 26, 26, 0.8) 100%);
-  border: 1px solid rgba(192, 192, 192, 0.2);
+.contact-link:not(.contact-link-static):hover {
+  padding-left: 12px;
 }
 
-.contact__information:hover {
-  transform: translateX(10px);
-  box-shadow: 0 4px 12px rgba(192, 192, 192, 0.3);
-  border-color: var(--first-color);
+.contact-link:not(.contact-link-static):hover .contact-arr {
+  transform: translateX(4px);
+  color: var(--accent);
 }
 
-.contact__icon {
-  font-size: 2rem;
-  color: var(--first-color);
-  margin-right: var(--mb-0-75);
+.contact-link-static {
+  cursor: default;
 }
 
-.contact__title {
-  font-size: var(--h3-font-size);
-  font-weight: var(--font-medium);
+.contact-lb {
+  color: var(--fg-dim);
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 0.1em;
 }
 
-.contact__subtitle {
-  font-size: var(--small-font-size);
-  color: var(--text-color-light);
+.contact-v {
+  color: var(--fg);
 }
 
-.contact__linkedin {
-  margin-bottom: 4rem;
+.contact-arr {
+  color: var(--fg-muted);
+  transition: all 0.2s;
+  text-align: right;
 }
 
-.contact__title-spacing {
-  margin-top: 4rem;
+@media (max-width: 960px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
 }
