@@ -1,5 +1,5 @@
 .foot {
-  padding: 40px 0;
+  padding: 32px 0 28px;
   border-top: 1px solid var(--rule);
 }
 
@@ -10,12 +10,121 @@
   font-family: var(--font-mono);
   font-size: 11px;
   color: var(--fg-muted);
+  gap: 16px;
 }
 
+.foot-copy {
+  flex-shrink: 0;
+}
+
+.foot-built {
+  color: var(--fg-dim);
+}
+
+.foot-built a {
+  color: var(--fg-muted);
+  text-decoration: none;
+}
+
+.foot-built a:hover {
+  color: var(--accent);
+}
+
+.foot-links {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+.foot-links a {
+  color: var(--fg-dim);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.foot-links a:hover {
+  color: var(--fg-muted);
+}
+
+.foot-policy-btn {
+  background: none;
+  border: 1px solid var(--rule-strong);
+  color: var(--fg-muted);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.foot-policy-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* ── Expandable policy panel ────────────────────────── */
+.foot-policy {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px dashed var(--rule);
+}
+
+.foot-policy-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.foot-policy-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.foot-policy-label {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--fg-dim);
+}
+
+.foot-policy-val {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--fg-muted);
+  line-height: 1.6;
+}
+
+.foot-policy-val a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.foot-policy-val a:hover {
+  text-decoration: underline;
+}
+
+/* ── Responsive ─────────────────────────────────────── */
 @media (max-width: 960px) {
   .foot-inner {
     flex-direction: column;
-    gap: 8px;
+    gap: 10px;
     text-align: center;
+  }
+
+  .foot-policy-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .foot-policy-grid {
+    grid-template-columns: 1fr;
   }
 }

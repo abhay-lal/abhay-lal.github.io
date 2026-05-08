@@ -6,19 +6,12 @@
 
 .section-head {
   display: grid;
-  grid-template-columns: 200px 1fr auto;
+  grid-template-columns: 1fr auto;
   gap: 40px;
   align-items: baseline;
   margin-bottom: 56px;
   padding-bottom: 20px;
   border-bottom: 1px dashed var(--rule);
-}
-
-.section-num {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  color: var(--fg-dim);
-  letter-spacing: 0.1em;
 }
 
 .section-title {
@@ -86,12 +79,7 @@ body[data-theme="serif"] .about-body {
 }
 
 .about-lead {
-  font-size: 1.2em;
-}
-
-.about-copy {
-  color: var(--fg-muted);
-  font-size: 0.9em;
+  font-size: 1.05em;
 }
 
 .about-side {
@@ -118,30 +106,6 @@ body[data-theme="serif"] .about-body {
 }
 
 .kv-v {
-  color: var(--fg);
-}
-
-.focus-label {
-  margin-top: 20px;
-  color: var(--fg-dim);
-  font-size: 10px;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-}
-
-.focus-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 12px;
-}
-
-.focus-pill {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  padding: 6px 10px;
-  border: 1px solid var(--rule-strong);
-  border-radius: var(--radius);
   color: var(--fg);
 }
 

@@ -15,7 +15,7 @@ const Hero = ({ data }) => {
               <em className="hero-em">production</em><span className="hero-accent">.</span>
             </h1>
             <p className="hero-sub">
-              Graduate Research Data Scientist at UC San Diego Health. I work at the seam where research meets production — MRI pipelines, multimodal LLMs, guardrails for agents, and the occasional TinyML deployment.
+              Applied AI Engineer — currently Forward Deployed at a stealth AI startup in SF. I design and ship end-to-end intelligent systems: LLM guardrails, agentic pipelines, clinical ML, and edge deployments. MS CS (AI) at UC San Diego.
             </p>
             <div className="hero-ctas">
               <a className="btn btn-primary" href="#contact">
@@ -27,19 +27,35 @@ const Hero = ({ data }) => {
               <a className="btn" href={data.meta.links.scholar} target="_blank" rel="noopener noreferrer">
                 Scholar <span className="btn-arr">↗</span>
               </a>
+              <a className="btn" href={data.meta.links.linkedin} target="_blank" rel="noopener noreferrer">
+                LinkedIn <span className="btn-arr">↗</span>
+              </a>
+              <a className="btn" href={data.meta.links.github} target="_blank" rel="noopener noreferrer">
+                GitHub <span className="btn-arr">↗</span>
+              </a>
             </div>
           </div>
           <aside className="hero-aside">
-            <div className="hero-aside-big">
-              7<span className="hero-aside-dot">·</span>
+            <div className="hero-photo-wrap">
+              <img
+                src="/assets/img/abhay_halftone.png"
+                alt="Abhay Lal"
+                className="hero-photo"
+              />
             </div>
-            <div>PEER-REVIEWED</div>
-            <div>PUBLICATIONS</div>
-            <div className="hero-aside-rule">— — —</div>
             <div className="hero-aside-stats">
-              4 industry roles<br />
-              13+ projects<br />
-              2 hackathon wins
+              <div className="hero-stat">
+                <span className="hero-stat-num">7<span className="hero-accent">·</span></span>
+                <span className="hero-stat-label">Publications</span>
+              </div>
+              <div className="hero-stat">
+                <span className="hero-stat-num">5<span className="hero-accent">·</span></span>
+                <span className="hero-stat-label">Industry roles</span>
+              </div>
+              <div className="hero-stat">
+                <span className="hero-stat-num">4<span className="hero-accent">·</span></span>
+                <span className="hero-stat-label">Hackathon wins</span>
+              </div>
             </div>
           </aside>
         </div>

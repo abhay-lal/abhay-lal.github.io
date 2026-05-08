@@ -75,7 +75,7 @@ Edit component files in `src/components/` to update your content.
 
 ## 📞 Contact
 
-- **Email**: abhay.lal.cs@gmail.com
+- **Email**: ablal@ucsd.edu
 - **LinkedIn**: [lal-abhay](https://www.linkedin.com/in/lal-abhay/)
 - **GitHub**: [abhay-lal](https://github.com/abhay-lal)
 - **Portfolio**: [abhay-lal.me](https://abhay-lal.me)

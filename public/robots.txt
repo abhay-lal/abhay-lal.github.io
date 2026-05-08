@@ -1,18 +1,14 @@
 # robots.txt for https://abhay-lal.me/
+# Last updated: 2026
 
 User-agent: *
 Allow: /
 Disallow: /admin/
 Disallow: /private/
 Disallow: /api/
-
-# Sitemap location
-Sitemap: https://abhay-lal.me/sitemap.xml
-
-# Crawl-delay for polite bots
 Crawl-delay: 1
 
-# Allow all major search crawlers full access
+# ── Search engines ───────────────────────────────────
 User-agent: Googlebot
 Allow: /
 
@@ -28,7 +24,44 @@ Allow: /
 User-agent: LinkedInBot
 Allow: /
 
-# Rate-limit aggressive SEO bots
+# ── AI search & indexing crawlers (allowed) ──────────
+# These index content for AI-powered search — fine to crawl.
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+# ── AI training scrapers (disallowed) ────────────────
+# Do not use this site's content for model training datasets.
+User-agent: CCBot
+Disallow: /
+
+User-agent: omgili
+Disallow: /
+
+User-agent: omgilibot
+Disallow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+# ── Aggressive SEO bots (rate-limited) ───────────────
 User-agent: MJ12bot
 Disallow: /
 
@@ -37,3 +70,6 @@ Crawl-delay: 10
 
 User-agent: SemrushBot
 Crawl-delay: 10
+
+# ── Sitemap ───────────────────────────────────────────
+Sitemap: https://abhay-lal.me/sitemap.xml

@@ -13,11 +13,11 @@ import Footer from './components/Footer';
 export const PORTFOLIO_DATA = {
   meta: {
     name: "Abhay Lal",
-    role: "AI / ML Researcher",
+    role: "Applied AI Engineer",
     location: "San Diego, CA",
     institution: "UC San Diego",
-    status: "Available for Summer 2026",
-    email: "abhay.lal.cs@gmail.com",
+    status: "Full-Time from June 2026",
+    email: "ablal@ucsd.edu",
     links: {
       linkedin: "https://www.linkedin.com/in/lal-abhay/",
       github: "https://github.com/abhay-lal",
@@ -27,36 +27,44 @@ export const PORTFOLIO_DATA = {
     }
   },
   about: {
-    lead: "I build ML systems that sit between research and production — from neuroimaging pipelines to multimodal recommendation benchmarks to guardrails for LLM agents.",
-    body: "Currently a Master's student in Computer Science at UC San Diego, working as a Graduate Research Data Scientist at UCSD Health. My work spans AI safety, healthcare AI, neuroimaging, and large multimodal models. Before UCSD, I interned at Wells Fargo, Samsung R&D, and IIT Bombay — building ETL pipelines, forecasting models, and CV systems used in production.",
-    focus: ["AI Safety", "Neuroimaging ML", "Healthcare AI", "Multimodal LLMs", "Computer Vision"]
+    bio: "Applied AI engineer currently embedded as a Forward Deployed Engineer at a stealth AI startup in San Francisco, while completing my MS CS (AI) at UC San Diego. I design and ship end-to-end intelligent systems — LLM guardrails, agentic pipelines, clinical-scale neuroimaging ML, and edge deployments. Previously MLE at UCSD Health and intern at IIT Bombay, Wells Fargo, and Samsung R&D.",
+    focus: ["Applied AI Engineering", "LLM Safety & Agents", "Multimodal Systems", "Healthcare AI", "Edge / TinyML"]
   },
   experience: [
     {
-      role: "Graduate Research Data Scientist",
+      role: "Forward Deployed Engineer Intern",
+      org: "Stealth Startup — AI for Supply Chain",
+      loc: "San Francisco, CA",
+      date: "Mar 2026 — Present",
+      current: true,
+      tags: ["Python", "Neo4j", "Graph"],
+      bullets: [
+        "Embedded with enterprise customers to build Python ERP-to-Neo4j graph pipelines for supply-chain analytics.",
+        "Translated customer requirements into shipped features on-site, using Claude Code and Cursor as primary development tools."
+      ]
+    },
+    {
+      role: "Machine Learning Engineer",
       org: "UC San Diego Health",
       loc: "San Diego, CA",
       date: "Jan 2025 — Present",
       current: true,
       tags: ["Python", "SHAP", "MRI"],
       bullets: [
-        "Refactored 5,000+ lines of MATLAB neuroimaging code into modular Python ML pipelines for scalable experimentation.",
-        "Processed 10K+ multimodal MRI scans integrating imaging, genetic, and environmental predictors for large-scale analysis.",
-        "Built reproducible modeling pipelines across 5K+ participants using group-aware cross-validation and covariate correction.",
-        "Trained Logistic Regression and SVM models combining 15+ multimodal feature sets for neuropsychiatric prediction.",
-        "Applied SHAP explainability to quantify predictor importance, achieving 0.70 AUC with multimodal stacked classifiers."
+        "Rebuilt 5,000 lines of MATLAB neuroimaging code into modular Python ML components, achieving 3.5× faster GPU throughput through I/O profiling and hardware utilization improvements.",
+        "Built an end-to-end multimodal ML pipeline combining MRI neuroimaging, polygenic scores, and environmental biomarkers across 10K+ scans with 100+ group-aware cross-validation splits.",
+        "Reached AUC 0.70 on psychiatric risk prediction using stacked LR/SVM classifiers; applied SHAP to surface dominant MRI and genetic predictors for clinical collaborators (poster at SfN 2025)."
       ]
     },
     {
-      role: "Research Intern",
+      role: "Machine Learning Engineer Intern",
       org: "IIT Bombay",
       loc: "Mumbai, IN",
       date: "Jan 2024 — Jun 2024",
       tags: ["YOLOv8", "Docker", "CUDA"],
       bullets: [
-        "Designed YOLOv8 and Docker computer vision pipelines on NVIDIA GPUs; processed 30k+ frames efficiently.",
-        "Cut training time from 5 to 3 hrs/run; delivered REST microservices for real-time engagement signals.",
-        "Analyzed 80k+ study-log entries with valence-arousal modeling to quantify engagement signals."
+        "Designed a GPU-native YOLOv8 detection pipeline in Docker on NVIDIA DGX; processed 30K+ video frames per run and cut training time from 5 to 3 hours through I/O bottleneck profiling.",
+        "Applied valence-arousal affective modeling to 80K+ study logs to generate per-session engagement scores; built REST microservices with unit and integration tests for the product team."
       ]
     },
     {
@@ -66,33 +74,35 @@ export const PORTFOLIO_DATA = {
       date: "Jun 2023 — Aug 2023",
       tags: ["FastAPI", "SpaCy", "LDA"],
       bullets: [
-        "Engineered scalable Python ETL pipelines using Pandas and SpaCy, processing 2,500+ FHA policy documents.",
-        "Deployed LDA topic modeling microservice via FastAPI; achieved 0.78 coherence score for text analytics.",
-        "Reduced manual review time from 4 hrs to 25 mins via regex-based topic tagging and structured analytics."
+        "Built scalable Python/SpaCy ETL pipelines over 2,500+ FHA regulatory documents, improving throughput 70% with memory-efficient distributed processing.",
+        "Deployed an LDA topic model as a FastAPI microservice achieving 0.78 coherence; automated categorization cut manual review from 4 hours to 25 minutes for the compliance team."
       ]
     },
     {
-      role: "Research Intern",
-      org: "Samsung R&D Institute",
+      role: "Machine Learning Intern",
+      org: "Samsung R&D Institute (SRI-B)",
       loc: "Bangalore, IN",
-      date: "Dec 2022 — Aug 2023",
+      date: "Dec 2022 — May 2023",
       tags: ["SARIMA", "LSTM", "Forecasting"],
       bullets: [
-        "Performed time-series EDA (decomposition, outliers, stationarity) on sales data across 12+ product lines.",
-        "Built SARIMA and LSTM forecasting models with sliding-window validation; improved MAE by 15%.",
-        "Awarded Certificate of Excellence plus $1,200 PRISM reward for outstanding model performance."
+        "Ran decomposition, outlier detection, and stationarity checks on sales time-series across 12+ product lines; trained SARIMA, Holt-Winters, and LSTM models with sliding-window cross-validation, cutting MAE by 15%.",
+        "Received Certificate of Excellence and the $1,200 PRISM award; shipped all models to production with automated performance monitoring and alerting."
       ]
     }
   ],
   education: [
     {
-      role: "M.S. Computer Science",
+      role: "M.S. Computer Science — Artificial Intelligence",
       org: "University of California, San Diego",
       loc: "San Diego, CA",
-      date: "2024 — 2026",
+      date: "Sept 2024 — Jun 2026",
       current: true,
-      tags: ["GPA 3.92"],
-      bullets: ["Focus: Machine Learning, AI Safety, Multimodal Models.", "Graduate Research at UCSD Health Neuroimaging."]
+      tags: ["GPA 3.92", "Funded GSR"],
+      bullets: [
+        "Fully funded via Graduate Student Researcher (GSR) appointment for 90% of the MS program.",
+        "Coursework: CSE 251A Machine Learning: Learning Algorithms · CSE 251C ML Theory · CSE 291 Fair & Transparent ML · CSE 256 Statistical NLP · CSE 258R Recommender Systems & Web Mining · CSE 253 Machine Learning for Music · CSE 291A Human-Centered AI · DSC 210 Numerical Linear Algebra · CSE 261 Advanced Data-Driven Text Mining · CSE 237C Validation & Testing for Embedded Systems · CSE 237D Embedded Systems Design · COGS 209 Statistical Machine Learning for Social Sciences.",
+        "Graduate Research at UCSD Health Neuroimaging (SfN 2025 poster)."
+      ]
     },
     {
       role: "B.Tech Computer Science",
@@ -106,11 +116,12 @@ export const PORTFOLIO_DATA = {
   projects: [
     {
       title: "Visper",
-      sub: "Voice-first RAG assistant for GitHub repos",
+      sub: "Voice-first RAG assistant — Gemini API Hackathon Top 10",
       desc: "Paste a GitHub URL and talk to your code in real time. Answers are grounded with citations and links back to files. Turns JSON summaries into slides with synchronized TTS narration and an MP4 output — designed with accessibility in mind for blind developers.",
       tags: ["RAG", "Gemini", "FastAPI", "TTS"],
       link: "https://github.com/abhay-lal/Visper",
-      size: "featured", year: "2025"
+      award: "Gemini Hackathon · Top 10",
+      year: "2025"
     },
     {
       title: "AI Safety Protocol",
@@ -118,23 +129,24 @@ export const PORTFOLIO_DATA = {
       desc: "Code-aware guardrail system with regex checks, Llama Guard 4, and Cerebras inference. Detects prompt injection, jailbreak, and backdoor threats in agentic workflows with multi-agent validation and a real-time telemetry dashboard.",
       tags: ["LLM", "Safety", "Llama Guard"],
       link: "https://github.com/abhay-lal/AI-Safety-Protocol",
-      size: "std", year: "2025"
+      year: "2025"
     },
     {
       title: "Fire-Ready Forests",
-      sub: "ICPP 2025 data challenge — winner",
-      desc: "Ensemble models for hierarchical vegetation classification on the National Data Platform. Achieved 96.9% test precision on species-level classification for wildfire fuel characterization.",
-      tags: ["Ensembles", "NDP", "Winner"],
+      sub: "SDSC / Los Alamos Lab Data Challenge — Winner",
+      desc: "Ensemble models for hierarchical vegetation classification on the National Data Platform. Stacked RF and XGBoost classifiers reaching 96.9% accuracy and an 8%+ gain over baselines. Published at ACM ICPP 2025.",
+      tags: ["Ensembles", "XGBoost", "Winner"],
       link: "https://github.com/abhay-lal/fire-ready-forests-agni",
-      size: "wide", year: "2025"
+      award: "SDSC Data Challenge · Winner",
+      year: "2025"
     },
     {
       title: "MusiCRS",
       sub: "Audio-centric conversational recommendation benchmark",
-      desc: "Novel multimodal dataset combining Reddit dialogues with YouTube audio via FFmpeg. Benchmarked Qwen-2.5-7B and other LLMs under entity-linked conversational recommendation. Published as arXiv preprint.",
-      tags: ["Multimodal", "Qwen", "Benchmark"],
+      desc: "First multimodal evaluation benchmark linking 477 Reddit dialogues to grounded audio tracks. Benchmarked 9 frontier models across audio-only, query-only, and multimodal configs. Published at ICASSP 2026.",
+      tags: ["Multimodal", "Qwen-Audio", "Benchmark"],
       link: "https://arxiv.org/abs/2509.19469",
-      size: "sm", year: "2025"
+      year: "2025"
     },
     {
       title: "TinyML Owl",
@@ -142,7 +154,7 @@ export const PORTFOLIO_DATA = {
       desc: "Built quantized CNNs in PyTorch for owl-call classification. Exported to ONNX/TFLite, deployed on STM32 with X-Cube.AI and TFLite Micro for real-time, low-power field monitoring. Collaboration with E4E and San Diego Zoo Wildlife Alliance.",
       tags: ["TinyML", "STM32", "Edge"],
       link: "https://github.com/abhay-lal/TinyML-Owl",
-      size: "sm", year: "2024"
+      year: "2024"
     },
     {
       title: "BlogPod",
@@ -150,15 +162,25 @@ export const PORTFOLIO_DATA = {
       desc: "Convert podcast transcripts into structured blog posts via prompt engineering across LLaMA 3.1 8B/70B/405B. Evaluated with Gemini-1.5-Flash on clarity, tone, and engagement.",
       tags: ["LLaMA 3.1", "Prompting"],
       link: "https://github.com/abhay-lal/BlogPod",
-      size: "sm", year: "2024"
+      year: "2024"
     },
     {
       title: "Alveoli",
-      sub: "Chest X-ray triage in seconds",
-      desc: "MobileNetV2-based classifier that detects COVID-19, pneumonia, and tuberculosis from chest X-rays. Deployed as a secure web + mobile application.",
+      sub: "Chest X-ray triage — IPFS Hackathon Best Prize",
+      desc: "MobileNetV2-based classifier detecting COVID-19, pneumonia, and tuberculosis from chest X-rays. Won Best Prize at IPFS hackathon. Deployed as a secure web + mobile application.",
       tags: ["MobileNet", "Medical Imaging"],
       link: "https://github.com/abhay-lal/Alveoli",
-      size: "sm", year: "2023"
+      award: "IPFS Hackathon · Best Prize",
+      year: "2023"
+    },
+    {
+      title: "Asset Bubble",
+      sub: "Stock crash prediction — Wells Fargo Grand Academic Challenge Winner",
+      desc: "Predictive analytics platform outputting confidence scores on S&P 500 crash probability with estimated time intervals. Used ARIMA/SARIMAX for 2-year forecasting and CNN/Random Forest classifiers (94% accuracy) with real-time Twitter sentiment analysis via Alpha Vantage.",
+      tags: ["ARIMA", "CNN", "Random Forest"],
+      link: "https://github.com/abhay-lal/Asset-bubble",
+      award: "Wells Fargo Challenge · 1st Prize",
+      year: "2022"
     },
     {
       title: "ResPas",
@@ -166,17 +188,18 @@ export const PORTFOLIO_DATA = {
       desc: "Multi-label classification model combining deep learning and NLP to route resumes into job categories.",
       tags: ["NLP", "Classification"],
       link: "https://github.com/abhay-lal/ResumeParserClassifier",
-      size: "sm", year: "2023"
+      year: "2023"
     }
   ],
   publications: [
     {
-      year: "2025",
+      year: "2026",
       title: "MusiCRS: Benchmarking Audio-Centric Conversational Recommendation",
-      venue: "arXiv preprint",
+      venue: "IEEE ICASSP 2026",
       venueRef: "arXiv:2509.19469",
-      status: "Preprint",
+      status: "Published",
       authors: "Rohan Surana, Amit Namburi, Gagan Mundada, Abhay Lal, Zachary Novack, Julian McAuley, Junda Wu",
+      equalContrib: ["Rohan Surana", "Abhay Lal"],
       link: "https://arxiv.org/abs/2509.19469"
     },
     {
@@ -186,6 +209,7 @@ export const PORTFOLIO_DATA = {
       venueRef: "54th Intl. Conf. on Parallel Processing",
       status: "Published",
       authors: "Yash Vishe, Abhay Lal, Guruprasad Parasnis",
+      equalContrib: ["Yash Vishe", "Abhay Lal"],
       link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=TsTzc9AAAAAJ"
     },
     {
@@ -236,38 +260,20 @@ export const PORTFOLIO_DATA = {
   ],
   skills: [
     {
-      title: "AI & Data Science",
-      items: [
-        { n: "Computer Vision", p: 92 },
-        { n: "Natural Language Processing", p: 85 },
-        { n: "Probability & Statistics", p: 85 },
-        { n: "Generative AI", p: 60 }
-      ]
+      title: "Languages",
+      items: ["Python", "C / C++", "SQL", "Bash", "JavaScript"]
     },
     {
-      title: "Programming",
-      items: [
-        { n: "Python", p: 95 },
-        { n: "C / C++", p: 90 },
-        { n: "SQL", p: 85 }
-      ]
+      title: "ML / AI",
+      items: ["PyTorch", "TensorFlow", "JAX", "Hugging Face", "LangChain", "vLLM", "LoRA / PEFT", "RLHF", "ONNX", "TFLite"]
     },
     {
-      title: "Frameworks",
-      items: [
-        { n: "PyTorch", p: 90 },
-        { n: "TensorFlow", p: 85 },
-        { n: "Docker", p: 80 },
-        { n: "Git", p: 90 }
-      ]
+      title: "Domains",
+      items: ["Computer Vision", "NLP", "Large Language Models", "RAG", "AI Safety", "Neuroimaging ML", "TinyML", "Multimodal Models"]
     },
     {
-      title: "Cloud & Systems",
-      items: [
-        { n: "AWS", p: 85 },
-        { n: "Distributed Computing", p: 90 },
-        { n: "Linux", p: 80 }
-      ]
+      title: "Infrastructure",
+      items: ["AWS", "GCP", "Docker", "Kubernetes", "FastAPI", "Git", "Linux", "Distributed Systems"]
     }
   ]
 };
@@ -276,7 +282,7 @@ function App() {
   const [activeSection, setActiveSection] = useState('about');
 
   useEffect(() => {
-    document.body.setAttribute('data-theme', 'serif');
+    document.body.setAttribute('data-theme', 'dark');
   }, []);
 
   useEffect(() => {

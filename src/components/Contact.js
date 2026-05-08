@@ -5,8 +5,7 @@ const Contact = ({ data }) => {
   return (
     <section className="section" id="contact">
       <div className="page">
-        <div className="section-head">
-          <div className="section-num">§ 06 / CONTACT</div>
+          <div className="section-head">
           <h2 className="section-title">Say hello.</h2>
           <div className="section-meta">REPLIES IN 24H</div>
         </div>
@@ -14,7 +13,7 @@ const Contact = ({ data }) => {
           <h3 className="contact-big">
             Drop a line<br />at{' '}
             <a href={'mailto:' + data.meta.email}>
-              abhay.lal.cs<br />@gmail.com
+              {data.meta.email}
             </a>
           </h3>
           <div className="contact-side">
