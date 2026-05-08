@@ -1,6 +1,7 @@
 .exp-tabs {
   display: flex;
   gap: 4px;
+  flex-wrap: wrap;
   margin-bottom: 40px;
   font-family: var(--font-mono);
   font-size: 12px;
@@ -94,20 +95,6 @@ body[data-theme="serif"] .exp-role {
   border-radius: var(--radius);
 }
 
-.exp-chev {
-  font-family: var(--font-mono);
-  text-align: right;
-  padding-top: 8px;
-  color: var(--fg-dim);
-  font-size: 16px;
-  transition: transform 0.2s;
-}
-
-.exp-row.open .exp-chev {
-  transform: rotate(90deg);
-  color: var(--accent);
-}
-
 .exp-detail {
   grid-column: 2 / 4;
   margin-top: 12px;
@@ -160,5 +147,15 @@ body[data-theme="serif"] .exp-detail li {
 
   .exp-detail {
     grid-column: 1 / 2;
+  }
+}
+
+@media (max-width: 480px) {
+  .exp-role {
+    font-size: 20px;
+  }
+
+  .exp-detail li {
+    font-size: 14px;
   }
 }

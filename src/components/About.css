@@ -122,4 +122,22 @@ body[data-theme="serif"] .about-body {
   .about-grid {
     grid-template-columns: 1fr;
   }
+
+  .about-body {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 44px 0;
+  }
+
+  .section-head {
+    margin-bottom: 36px;
+  }
+
+  .about-body {
+    font-size: 16px;
+  }
 }

@@ -213,3 +213,31 @@ body[data-theme="dark"] .btn-primary:hover {
     gap: 8px;
   }
 }
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 28px 0 40px;
+  }
+
+  .hero-sub {
+    font-size: 15px;
+  }
+
+  .hero-ctas {
+    gap: 8px;
+  }
+
+  .btn {
+    padding: 10px 14px;
+    font-size: 11px;
+  }
+
+  .hero-photo-wrap {
+    width: 90px;
+    height: 90px;
+  }
+
+  .hero-stat-num {
+    font-size: 22px;
+  }
+}

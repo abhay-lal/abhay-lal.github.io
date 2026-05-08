@@ -90,3 +90,17 @@ body[data-theme="serif"] .contact-big {
     gap: 40px;
   }
 }
+
+@media (max-width: 480px) {
+  .contact-grid {
+    gap: 28px;
+  }
+
+  .contact-big {
+    font-size: clamp(32px, 10vw, 56px);
+  }
+
+  .contact-link {
+    font-size: 12px;
+  }
+}
