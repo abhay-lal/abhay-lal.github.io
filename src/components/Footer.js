@@ -35,8 +35,8 @@ const Footer = () => {
               <div className="foot-policy-item">
                 <span className="foot-policy-label">AI tools used</span>
                 <span className="foot-policy-val">
-                  This portfolio was built using Cursor IDE and Claude Code as primary development tools —
-                  consistent with the Forward Deployed Engineer work on my resume.
+                  This portfolio was built using Cursor IDE and Claude Code as primary development tools,
+                  consistent with my AI engineering work at Vyasa.
                 </span>
               </div>
               <div className="foot-policy-item">

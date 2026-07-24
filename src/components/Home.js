@@ -9,20 +9,17 @@ const Hero = ({ data }) => {
           <div>
             <h1 className="hero-title">
               Abhay Lal<span className="hero-accent">.</span><br />
-              <span className="hero-thin">Building AI —</span><br />
+              <span className="hero-thin">Building AI,</span><br />
               <span className="hero-thin">from research</span><br />
               <span className="hero-thin">to</span>{' '}
               <em className="hero-em">production</em><span className="hero-accent">.</span>
             </h1>
             <p className="hero-sub">
-              Applied AI Engineer — currently Forward Deployed at a stealth AI startup in SF. I design and ship end-to-end intelligent systems: LLM guardrails, agentic pipelines, clinical ML, and edge deployments. MS CS (AI) at UC San Diego.
+              Applied AI Engineer, currently at Vyasa in SF. I design and ship end-to-end intelligent systems: LLM guardrails, agentic pipelines, clinical ML, and edge deployments. MS CS (AI) at UC San Diego.
             </p>
             <div className="hero-ctas">
               <a className="btn btn-primary" href="#contact">
                 Get in touch <span className="btn-arr">↗</span>
-              </a>
-              <a className="btn" href={data.meta.links.resume} target="_blank" rel="noopener noreferrer">
-                Résumé <span className="btn-arr">↗</span>
               </a>
               <a className="btn" href={data.meta.links.scholar} target="_blank" rel="noopener noreferrer">
                 Scholar <span className="btn-arr">↗</span>

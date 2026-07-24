@@ -1,7 +1,7 @@
 import React from 'react';
 import './Publications.css';
 
-/* Visual identity per paper — topic color key + domain label */
+/* Visual identity per paper - topic color key + domain label */
 const paperMeta = {
   "MusiCRS: Benchmarking Audio-Centric Conversational Recommendation": {
     domain: "Multimodal · Recommendation",

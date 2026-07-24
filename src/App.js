@@ -22,21 +22,34 @@ export const PORTFOLIO_DATA = {
       linkedin: "https://www.linkedin.com/in/lal-abhay/",
       github: "https://github.com/abhay-lal",
       scholar: "https://scholar.google.com/citations?user=TsTzc9AAAAAJ",
-      x: "https://x.com/abbylaal",
-      resume: "https://drive.google.com/file/d/1casu6Y7gu1fHugDdG9rNaMCmcRVclvwq/view?usp=sharing"
+      x: "https://x.com/abbylaal"
     }
   },
   about: {
-    bio: "Applied AI engineer currently embedded as a Forward Deployed Engineer at a stealth AI startup in San Francisco, while completing my MS CS (AI) at UC San Diego. I design and ship end-to-end intelligent systems — LLM guardrails, agentic pipelines, clinical-scale neuroimaging ML, and edge deployments. Previously MLE at UCSD Health and intern at IIT Bombay, Wells Fargo, and Samsung R&D.",
+    bio: "Applied AI engineer currently working as an Artificial Intelligence Engineer at Vyasa in San Francisco, with an MS CS (AI) from UC San Diego. I design and ship end-to-end intelligent systems: LLM guardrails, agentic pipelines, clinical-scale neuroimaging ML, and edge deployments. Previously MLE at UCSD Health and intern at IIT Bombay, Wells Fargo, and Samsung R&D.",
     focus: ["Applied AI Engineering", "LLM Safety & Agents", "Multimodal Systems", "Healthcare AI", "Edge / TinyML"]
   },
   experience: [
     {
-      role: "Forward Deployed Engineer Intern",
-      org: "Stealth Startup — AI for Supply Chain",
+      role: "Artificial Intelligence Engineer",
+      org: "Vyasa",
       loc: "San Francisco, CA",
-      date: "Mar 2026 — Present",
+      date: "Jul 2026 - Present",
       current: true,
+      tags: ["Python", "MCP", "LLM Agents"],
+      bullets: [
+        "Developed AI solutions for supply chain management, enhancing ERP functionalities.",
+        "Implemented Model Context Protocol (MCP) servers to improve large language model (LLM) capabilities.",
+        "Designed connectors for LLM access to real-world data, facilitating better integration with existing systems.",
+        "Collaborated on tool-calling frameworks and agentic reasoning to streamline complex API integrations."
+      ]
+    },
+    {
+      role: "Artificial Intelligence Intern",
+      org: "Vyasa",
+      loc: "San Francisco Bay Area - Remote",
+      date: "Mar 2026 - Jun 2026",
+      current: false,
       tags: ["Python", "Neo4j", "Graph"],
       bullets: [
         "Embedded with enterprise customers to build Python ERP-to-Neo4j graph pipelines for supply-chain analytics.",
@@ -47,7 +60,7 @@ export const PORTFOLIO_DATA = {
       role: "Machine Learning Engineer",
       org: "UC San Diego Health",
       loc: "San Diego, CA",
-      date: "Jan 2025 — Present",
+      date: "Jan 2025 - Present",
       current: true,
       tags: ["Python", "SHAP", "MRI"],
       bullets: [
@@ -60,7 +73,7 @@ export const PORTFOLIO_DATA = {
       role: "Machine Learning Engineer Intern",
       org: "IIT Bombay",
       loc: "Mumbai, IN",
-      date: "Jan 2024 — Jun 2024",
+      date: "Jan 2024 - Jun 2024",
       tags: ["YOLOv8", "Docker", "CUDA"],
       bullets: [
         "Designed a GPU-native YOLOv8 detection pipeline in Docker on NVIDIA DGX; processed 30K+ video frames per run and cut training time from 5 to 3 hours through I/O bottleneck profiling.",
@@ -71,7 +84,7 @@ export const PORTFOLIO_DATA = {
       role: "Data Science Intern",
       org: "Wells Fargo",
       loc: "Hyderabad, IN",
-      date: "Jun 2023 — Aug 2023",
+      date: "Jun 2023 - Aug 2023",
       tags: ["FastAPI", "SpaCy", "LDA"],
       bullets: [
         "Built scalable Python/SpaCy ETL pipelines over 2,500+ FHA regulatory documents, improving throughput 70% with memory-efficient distributed processing.",
@@ -82,7 +95,7 @@ export const PORTFOLIO_DATA = {
       role: "Machine Learning Intern",
       org: "Samsung R&D Institute (SRI-B)",
       loc: "Bangalore, IN",
-      date: "Dec 2022 — May 2023",
+      date: "Dec 2022 - May 2023",
       tags: ["SARIMA", "LSTM", "Forecasting"],
       bullets: [
         "Ran decomposition, outlier detection, and stationarity checks on sales time-series across 12+ product lines; trained SARIMA, Holt-Winters, and LSTM models with sliding-window cross-validation, cutting MAE by 15%.",
@@ -92,10 +105,10 @@ export const PORTFOLIO_DATA = {
   ],
   education: [
     {
-      role: "M.S. Computer Science — Artificial Intelligence",
+      role: "M.S. Computer Science - Artificial Intelligence",
       org: "University of California, San Diego",
       loc: "San Diego, CA",
-      date: "Sept 2024 — Jun 2026",
+      date: "Sept 2024 - Jun 2026",
       current: true,
       tags: ["GPA 3.92", "Funded GSR"],
       bullets: [
@@ -108,7 +121,7 @@ export const PORTFOLIO_DATA = {
       role: "B.Tech Computer Science",
       org: "SRM Institute of Science & Technology",
       loc: "Chennai, IN",
-      date: "2020 — 2024",
+      date: "2020 - 2024",
       tags: ["CGPA 9.56/10"],
       bullets: ["Final CGPA 9.56.", "6 peer-reviewed publications as undergraduate author."]
     }
@@ -116,8 +129,8 @@ export const PORTFOLIO_DATA = {
   projects: [
     {
       title: "Visper",
-      sub: "Voice-first RAG assistant — Gemini API Hackathon Top 10",
-      desc: "Paste a GitHub URL and talk to your code in real time. Answers are grounded with citations and links back to files. Turns JSON summaries into slides with synchronized TTS narration and an MP4 output — designed with accessibility in mind for blind developers.",
+      sub: "Voice-first RAG assistant - Gemini API Hackathon Top 10",
+      desc: "Paste a GitHub URL and talk to your code in real time. Answers are grounded with citations and links back to files. Turns JSON summaries into slides with synchronized TTS narration and an MP4 output - designed with accessibility in mind for blind developers.",
       tags: ["RAG", "Gemini", "FastAPI", "TTS"],
       link: "https://github.com/abhay-lal/Visper",
       award: "Gemini Hackathon · Top 10",
@@ -133,7 +146,7 @@ export const PORTFOLIO_DATA = {
     },
     {
       title: "Fire-Ready Forests",
-      sub: "SDSC / Los Alamos Lab Data Challenge — Winner",
+      sub: "SDSC / Los Alamos Lab Data Challenge - Winner",
       desc: "Ensemble models for hierarchical vegetation classification on the National Data Platform. Stacked RF and XGBoost classifiers reaching 96.9% accuracy and an 8%+ gain over baselines. Published at ACM ICPP 2025.",
       tags: ["Ensembles", "XGBoost", "Winner"],
       link: "https://github.com/abhay-lal/fire-ready-forests-agni",
@@ -166,7 +179,7 @@ export const PORTFOLIO_DATA = {
     },
     {
       title: "Alveoli",
-      sub: "Chest X-ray triage — IPFS Hackathon Best Prize",
+      sub: "Chest X-ray triage - IPFS Hackathon Best Prize",
       desc: "MobileNetV2-based classifier detecting COVID-19, pneumonia, and tuberculosis from chest X-rays. Won Best Prize at IPFS hackathon. Deployed as a secure web + mobile application.",
       tags: ["MobileNet", "Medical Imaging"],
       link: "https://github.com/abhay-lal/Alveoli",
@@ -175,7 +188,7 @@ export const PORTFOLIO_DATA = {
     },
     {
       title: "Asset Bubble",
-      sub: "Stock crash prediction — Wells Fargo Grand Academic Challenge Winner",
+      sub: "Stock crash prediction - Wells Fargo Grand Academic Challenge Winner",
       desc: "Predictive analytics platform outputting confidence scores on S&P 500 crash probability with estimated time intervals. Used ARIMA/SARIMAX for 2-year forecasting and CNN/Random Forest classifiers (94% accuracy) with real-time Twitter sentiment analysis via Alpha Vantage.",
       tags: ["ARIMA", "CNN", "Random Forest"],
       link: "https://github.com/abhay-lal/Asset-bubble",

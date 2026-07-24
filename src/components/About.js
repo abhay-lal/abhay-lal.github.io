@@ -24,7 +24,7 @@ const About = ({ data }) => {
             </div>
             <div className="kv">
               <span className="kv-k">Now</span>
-              <span className="kv-v">Stealth Startup · FDE Intern</span>
+              <span className="kv-v">Vyasa · AI Engineer</span>
             </div>
             <div className="kv">
               <span className="kv-k">Also</span>
